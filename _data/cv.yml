@@ -5,93 +5,70 @@
       value: Farid Kazimov
     - name: Date of Birth
       value: 29th January 1999
+    - name: Title
+      value: Master Engineer | AI & Computer Vision Engineer | Neural Networks | Object Detection | Deep Learning
+    - name: Email
+      value: kazimov.ferid.99@gmail.com
     - name: Languages
-      value: English, German
+      value: Azerbaijani (Native), Turkish (Native), English (Fluent)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Science (M.Sc.)
+      institution: Wroclaw University of Science and Technology, Wroclaw, Poland
+      year: 2023 - 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Applied Computer Science.
+        - Specializing in **Computer Vision** and **Deep Learning**.
+    - title: Bachelor of Science (B.Sc.)
+      institution: Kahramanmaras Sutcu Imam University, Kahramanmaras, Turkey
+      year: 2017 - 2021
       description:
-        - Description 1.
-        - Description 2.
+        - Computer Engineering.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Software Engineer Intern
+      institution: Mavi Yesil Yazilim ve Otomasyon
+      year: June 2021 - July 2021
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Assisted in industrial automation solutions and system integration.
+        - Performed software validation and contributed to process control systems.
+    - title: Network Engineer Intern
+      institution: KSU IT Department
+      year: June 2019 - July 2019
       description:
-        - Description 1.
-        - Description 2.
+        - Participated in network setup, configuration, and troubleshooting.
+        - Prepared technical documentation for IT infrastructure maintenance.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/alshedivat/al-folio">Automatic Animal and Crowd Counting</a>
+      year: 2025
+      description: Developed a computer vision system using **YOLOv8** with heatmap and density maps for counting animals and people in dense environments.Validated on datasets including sheep, bees, cows, monkeys, butterflies, and humans.
+    - title: <a href="https://github.com/alshedivat/al-folio">Transfer Learning for Crowded Animals Detection</a>
+      year: 2025
+      description: Applied **transfer learning** to adapt YOLOv8 models trained on one species to others (e.g., cows, monkeys, butterflies). Cross-class fine-tuning improved generalization and reduced training data requirements for scalable deployment.
+    - title: <a href="https://github.com/alshedivat/al-folio">YOLO Version Comparison (YOLOv3 -> YOLO12)</a>
+      year: 2025
+      description: Benchmarking YOLO models for detecting animals in crowded herds, focusing on **accuracy**, **inference speed**, **occlusion robustness**, and **cross-species generalization**.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming and Tools
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - **Keywords:** Python • C++ • TensorFlow • PyTorch • Keras • OpenCV • YOLO • TensorBoard • Git • Google Colab • Roboflow
+    - title: Computer Vision
       items:
-        - Description 1.
-        - Description 2.
-
+        - **Keywords:** Convolutional Neural Networks (CNNs) • Heatmap and Density Map Generation • Image Classification and Segmentation • Object Detection and Counting • Transfer Learning and Fine-Tuning • Cross-Class Generalization
+   - title: Machine Learning and Deep Learning
+      items:
+        - **Keywords:** Neural Networks (ANN, RNN, LSTM, Transformers) • Anomaly Detection • Feature Engineering (SMOTE, PCA) • Regularization • Model Evaluation (mAP, F1-score, SHAP) • End-to-End Deep Learning Pipelines
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - **Hobbies:** Reading technical papers, Hiking, Learning new programming frameworks.
