@@ -3,8 +3,6 @@
   contents:
     - name: Full Name
       value: Farid Kazimov
-    - name: Date of Birth
-      value: 29th January 1999
     - name: Title
       value: Master Engineer | AI & Computer Vision Engineer | Neural Networks | Object Detection | Deep Learning
     - name: Email
@@ -20,7 +18,7 @@
       year: 2023 - 2025
       description:
         - Applied Computer Science.
-        - Specializing in **Computer Vision** and **Deep Learning**.
+        - Specializing in Computer Vision and Deep Learning.
     - title: Bachelor of Science (B.Sc.)
       institution: Kahramanmaras Sutcu Imam University, Kahramanmaras, Turkey
       year: 2017 - 2021
@@ -48,13 +46,19 @@
   contents:
     - title: <a href="https://github.com/alshedivat/al-folio">Automatic Animal and Crowd Counting</a>
       year: 2025
-      description: Developed a computer vision system using **YOLOv8** with heatmap and density maps for counting animals and people in dense environments.Validated on datasets including sheep, bees, cows, monkeys, butterflies, and humans.
+      description: 
+        - Developed a computer vision system using YOLOv8 with heatmap and density maps for counting animals and people in dense environments. Validated on datasets including sheep, bees, cows, monkeys, butterflies, and humans.
+        - YOLOv8 • OpenCV • Heatmap and Density Maps • Computer Vision
     - title: <a href="https://github.com/alshedivat/al-folio">Transfer Learning for Crowded Animals Detection</a>
       year: 2025
-      description: Applied **transfer learning** to adapt YOLOv8 models trained on one species to others (e.g., cows, monkeys, butterflies). Cross-class fine-tuning improved generalization and reduced training data requirements for scalable deployment.
+      description: 
+        - Applied transfer learning to adapt YOLOv8 models trained on one species to others (e.g., cows, monkeys, butterflies). Cross-class fine-tuning improved generalization and reduced training data requirements for scalable deployment.
+        - Transfer Learning • Fine-Tuning • Cross-Class Generalization • Domain Adaptation
     - title: <a href="https://github.com/alshedivat/al-folio">YOLO Version Comparison (YOLOv3 -> YOLO12)</a>
       year: 2025
-      description: Benchmarking YOLO models for detecting animals in crowded herds, focusing on **accuracy**, **inference speed**, **occlusion robustness**, and **cross-species generalization**.
+      description: 
+        - Benchmarking YOLO models for detecting animals in crowded herds, focusing on accuracy, inference speed, occlusion robustness, and cross-species generalization.
+        - YOLOv3–YOLOv8+ • Backbone Comparison • Anchor-Free Detection • Non-Maximum Suppression (NMS) • Inference Speed and Latency • Model Optimization (Quantization, Pruning)
 
 - title: Skills
   type: nested_list
