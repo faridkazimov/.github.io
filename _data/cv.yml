@@ -65,9 +65,10 @@
     - title: Computer Vision
       items:
         - **Keywords:** Convolutional Neural Networks (CNNs) • Heatmap and Density Map Generation • Image Classification and Segmentation • Object Detection and Counting • Transfer Learning and Fine-Tuning • Cross-Class Generalization
-   - title: Machine Learning and Deep Learning
+    - title: Machine Learning and Deep Learning
       items:
         - **Keywords:** Neural Networks (ANN, RNN, LSTM, Transformers) • Anomaly Detection • Feature Engineering (SMOTE, PCA) • Regularization • Model Evaluation (mAP, F1-score, SHAP) • End-to-End Deep Learning Pipelines
+        
 - title: Other Interests
   type: list
   contents:
