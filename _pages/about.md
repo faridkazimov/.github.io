@@ -6,7 +6,7 @@ subtitle: <a href='#'>Master Engineer | AI & Computer Vision Engineer | Neural N
 
 profile:
   align: right
-  image: 3,5x4.5.JPG
+  image: 3,5x4,5.JPG
   image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
