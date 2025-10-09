@@ -1,12 +1,10 @@
-# Dosya Adı: _data/cv.yml
-
 - title: General Information
   type: map
   contents:
     - name: Full Name
       value: Farid Kazimov
     - name: Label
-      value: Master Engineer | AI & Computer Vision Engineer | Neural Networks | Object Detection | Deep Learning
+      value: Master Engineer | Computer Vision & Deep Learning Specialist
     - name: Email
       value: kazimov.ferid.99@gmail.com
     - name: Languages
@@ -15,28 +13,32 @@
 - title: Education
   type: time_table
   contents:
+    # --- Yüksek Lisans Bölümü (Hatanın Kaynağı Burasıydı) ---
     - title: Master of Science (M.Sc.)
       institution: Wroclaw University of Science and Technology, Wroclaw, Poland
-      year: 2023 - 2025 
+      year: 2023 - 2025 (Expected)
       description:
         - Applied Computer Science.
         - Specializing in **Computer Vision** and **Deep Learning**.
-        - title: Key Courses:
-          contents:
-            - Advanced Deep Learning
-            - Computer Vision
-            - Machine Learning Systems
+      # Hata veren 'title' ve 'contents' yapısı yerine 'notes' kullanıldı
+      notes:
+        title: Key Courses
+        contents:
+          - Advanced Deep Learning
+          - Computer Vision
+          - Machine Learning Systems
 
     - title: Bachelor of Science (B.Sc.)
       institution: Kahramanmaras Sutcu Imam University, Kahramanmaras, Turkey
       year: 2017 - 2021
       description:
         - Computer Engineering.
-        - title: Focus Areas:
-          contents:
-            - Data Structures and Algorithms
-            - Digital Image Processing
-            - Database Management
+      notes:
+        title: Focus Areas
+        contents:
+          - Data Structures and Algorithms
+          - Digital Image Processing
+          - Database Management
 
 - title: Experience
   type: time_table
