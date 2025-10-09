@@ -2,100 +2,96 @@
   type: map
   contents:
     - name: Full Name
-      value: Farid Kazimov
-    - name: Label
-      value: Master Engineer | Computer Vision & Deep Learning Specialist
-    - name: Email
-      value: kazimov.ferid.99@gmail.com
+      value: Albert Einstein
+    - name: Date of Birth
+      value: 14th March 1879
     - name: Languages
-      value: Azerbaijani (Native), Turkish (Native), English (Fluent)
+      value: English, German
 
 - title: Education
   type: time_table
   contents:
-    # --- Yüksek Lisans Bölümü (Hatanın Kaynağı Burasıydı) ---
-    - title: Master of Science (M.Sc.)
-      institution: Wroclaw University of Science and Technology, Wroclaw, Poland
-      year: 2023 - 2025 (Expected)
+    - title: PhD
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1905
       description:
-        - Applied Computer Science.
-        - Specializing in **Computer Vision** and **Deep Learning**.
-      # Hata veren 'title' ve 'contents' yapısı yerine 'notes' kullanıldı
-      notes:
-        title: Key Courses
-        contents:
-          - Advanced Deep Learning
-          - Computer Vision
-          - Machine Learning Systems
-
-    - title: Bachelor of Science (B.Sc.)
-      institution: Kahramanmaras Sutcu Imam University, Kahramanmaras, Turkey
-      year: 2017 - 2021
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Federal teaching diploma
+      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+      year: 1900
       description:
-        - Computer Engineering.
-      notes:
-        title: Focus Areas
-        contents:
-          - Data Structures and Algorithms
-          - Digital Image Processing
-          - Database Management
+        - Description 1.
+        - Description 2.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Software Engineer Intern
-      institution: Mavi Yesil Yazilim ve Otomasyon
-      year: June 2021 - July 2021
+    - title: Professor of Theoretical Physics
+      institution: Institute for Advanced Study, Princeton University
+      year: 1933 - 1955
       description:
-        - Assisted in industrial automation solutions and system integration.
-        - Performed software validation and contributed to process control systems.
-
-    - title: Network Engineer Intern
-      institution: KSU IT Department
-      year: June 2019 - July 2019
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Visiting Professor
+      institution: California Institute of Technology, Pasadena, California, US
+      year: 1933
       description:
-        - Participated in network setup, configuration, and troubleshooting.
-        - Prepared technical documentation for IT infrastructure maintenance.
+        - Description 1.
+        - Description 2.
 
-- title: Skills & Expertise
-  type: nested_list
-  contents:
-    - title: Programming and Tools (Master)
-      items:
-        - **Keywords:** Python • C++ • TensorFlow • PyTorch • Keras • OpenCV • YOLO • TensorBoard • Git • Google Colab • Roboflow
+    - title: Director
+      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
+      year: 1917-1933
 
-    - title: Computer Vision (Master)
-      items:
-        - **Keywords:** Convolutional Neural Networks (CNNs) • Heatmap and Density Map Generation • Image Classification and Segmentation • Object Detection and Counting • Transfer Learning and Fine-Tuning • Cross-Class Generalization
+    - title: Professor of Theoretical Physics
+      institution: Karl-Ferdinand University, Prague, Czechoslovakia
+      year: 1911 - 1917
+      description:
 
-    - title: Machine Learning and Deep Learning (Master)
-      items:
-        - **Keywords:** Neural Networks (ANN, RNN, LSTM, Transformers) • Anomaly Detection • Feature Engineering (SMOTE, PCA) • Regularization • Model Evaluation (mAP, F1-score, SHAP) • End-to-End Deep Learning Pipelines
+    - title: Associate Professor of Theoretical Physics
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1909 - 1911
 
-- title: Projects
+- title: Open Source Projects
   type: time_table
   contents:
-    - title: Automatic Animal and Crowd Counting
-      institution: Deep Learning & Computer Vision System
-      year: 2024
-      description:
-        - Developed a computer vision system using **YOLOv8** with heatmap and density maps for counting animals and people in dense environments.
-        - Validated on datasets including sheep, bees, cows, monkeys, butterflies, and humans.
+    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+      year: 2015-now
+      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-    - title: Transfer Learning for Crowded Animals Detection
-      institution: Cross-Class Fine-Tuning
-      year: 2024
-      description:
-        - Applied **transfer learning** to adapt YOLOv8 models trained on one species to others (e.g., cows, monkeys, butterflies).
-        - Cross-class fine-tuning improved generalization and reduced training data requirements for scalable deployment.
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 1921
+      items:
+        - Nobel Prize in Physics
+        - Matteucci Medal
+    - year: 2029
+      items:
+        - Max Planck Medal
 
-    - title: YOLO Version Comparison (YOLOv3 -> YOLO12)
-      institution: Model Benchmarking
-      year: 2023
-      description:
-        - Benchmarking YOLO models for detecting animals in crowded herds, focusing on **accuracy**, **inference speed**, **occlusion robustness**, and **cross-species generalization**.
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Topic 1.
+      items:
+        - Description 1.
+        - Description 2.
+    - title: Topic 2.
+      items:
+        - Description 1.
+        - Description 2.
 
 - title: Other Interests
   type: list
   contents:
-    - **Hobbies:** Reading technical papers, Hiking, Learning new programming frameworks.
+    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
