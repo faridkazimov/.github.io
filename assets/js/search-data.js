@@ -120,17 +120,6 @@ ninja.data = [{
             window.location.href = "/.github.io/blog/2024/typograms/";
           
         },
-      },{id: "post-a-post-with-pseudo-code",
-        
-          title: "a post with pseudo code",
-        
-        description: "this is what included pseudo code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/.github.io/blog/2024/pseudocode/";
-          
-        },
       },{id: "post-a-post-with-geojson",
         
           title: "a post with geojson",
