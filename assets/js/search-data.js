@@ -329,17 +329,6 @@ ninja.data = [{
             window.location.href = "/.github.io/assets/pdf/example_pdf.pdf";
           
         },
-      },{id: "post-a-post-with-diagrams",
-        
-          title: "a post with diagrams",
-        
-        description: "an example of a blog post with diagrams",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/.github.io/blog/2021/diagrams/";
-          
-        },
       },{id: "post-a-distill-style-blog-post",
         
           title: "a distill-style blog post",
