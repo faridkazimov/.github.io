@@ -42,6 +42,21 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/.github.io/books/the_godfather/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/.github.io/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/.github.io/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/.github.io/projects/5_project/";
             },},{id: "projects-project-6",
           title: 'project 6',
           description: "a project with no image",
