@@ -42,11 +42,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/.github.io/books/the_godfather/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/.github.io/projects/9_project/";
             },},{
         id: 'social-email',
         title: 'email',
