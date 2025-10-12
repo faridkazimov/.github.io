@@ -30,8 +30,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/.github.io/projects/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
+        },{id: "nav-",
+          title: "",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -57,11 +57,25 @@ ninja.data = [{
           window.open("mailto:%6B%61%7A%69%6D%6F%76.%66%65%72%69%64.%39%39@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/faridkazimov", "_blank");
+        },
+      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/farid-kazimov-a7b90a214", "_blank");
+        },
+      },{
+        id: 'social-youtube',
+        title: 'YouTube',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://youtube.com/@KZMV_music", "_blank");
         },
       },{
       id: 'light-theme',
