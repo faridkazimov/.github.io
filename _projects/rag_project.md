@@ -18,7 +18,7 @@ tags:
   - Prompt Engineering
 github: https://github.com/faridkazimov/rag_project
 demo: https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/
-# thumbnail: /assets/img/project-covers/rag-project-cover.png # (Add a thumbnail here if you have one)
+# thumbnail: /assets/img/project-covers/rag-project-cover.png # (Proje kapak resminiz varsa buraya ekleyin)
 ---
 
 Despite their immense capabilities, Large Language Models (LLMs) suffer from a critical weakness: **hallucination**. This is the tendency to confidently produce false or fabricated information when they don't know an answer. This project was developed to provide a practical solution to this core problem.
@@ -98,7 +98,7 @@ To run this project on your local machine:
 2.  **Create and activate the virtual environment:**
     ```bash
     python -m venv venv
-    source venv/bin/activate  # For MacOS/Linux
+    source vK/bin/activate  # For MacOS/Linux
     # venv\Scripts\activate  # For Windows
     ```
 
