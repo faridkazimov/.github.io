@@ -76,11 +76,11 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/farid-kazimov-a7b90a214", "_blank");
         },
       },{
-        id: 'social-youtube',
-        title: 'YouTube',
+        id: 'social-orcid',
+        title: 'ORCID',
         section: 'Socials',
         handler: () => {
-          window.open("https://youtube.com/@KZMV_music", "_blank");
+          window.open("https://orcid.org/0009-0007-9279-0992", "_blank");
         },
       },{
       id: 'light-theme',
