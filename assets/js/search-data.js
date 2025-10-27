@@ -49,9 +49,9 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/.github.io/books/the_godfather/";
-            },},{id: "projects-document-question-answering-system-rag-project",
-          title: 'Document Question-Answering System (RAG Project)',
-          description: "A RAG-based web app using Streamlit and LangChain to answer questions about a text document, preventing LLM hallucinations.",
+            },},{id: "projects-",
+          title: '',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/.github.io/projects/rag_project/";
             },},{
