@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Building a Reliable AI: The RAG Q&A System
-date: 2025-10-28 00:15:00 +0100
 description: A portfolio project demonstrating a RAG architecture using LangChain, FAISS, and Streamlit to eliminate LLM hallucinations.
-categories:
-  - Projects
-  - AI
-  - Portfolio
+img: assets/img/project-covers/rag-project-cover.png # (Kapak resminizi buraya ekleyin)
+importance: 1
+category: AI / NLP
+github: https://github.com/faridkazimov/rag_project
+demo: https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/
 tags:
   - Python
   - LLM
@@ -16,10 +16,16 @@ tags:
   - FAISS
   - OpenAI
   - Prompt Engineering
-github: https://github.com/faridkazimov/rag_project
-demo: https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/
-# thumbnail: /assets/img/project-covers/rag-project-cover.png # (Proje kapak resminiz varsa buraya ekleyin)
 ---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/rag_project_demo.gif" title="Project Demo GIF" class="img-fluid rounded z-depth-1" %} 
+        </div>
+</div>
+<div class="caption">
+    A live demo of the project's Streamlit interface.
+</div>
 
 Despite their immense capabilities, Large Language Models (LLMs) suffer from a critical weakness: **hallucination**. This is the tendency to confidently produce false or fabricated information when they don't know an answer. This project was developed to provide a practical solution to this core problem.
 
@@ -29,7 +35,7 @@ It is an interactive web application that uses the **Retrieval-Augmented Generat
 
 ---
 
-### Project Aim & The Problem It Solves
+## Project Aim & The Problem It Solves
 
 One of the biggest hurdles to enterprise AI adoption is trust. When a company needs an AI system to answer questions about its internal documents, technical manuals, or legal texts, the answers must be 100% accurate and based *only* on those documents.
 
@@ -37,11 +43,11 @@ A standard LLM, when asked, "What was Project Titan's budget?", might invent a n
 
 ---
 
-### System Architecture: The Journey of a Question
+## System Architecture: The Journey of a Question
 
 When a user asks a question, the following steps occur in the background:
 
-1.  **Data Preparation (One-time):** The reference `bilgi_belgesi.txt` file is loaded and split into small, semantically meaningful chunks.
+1.  **Data Preparation (One-time):** The reference document is loaded and split into small, semantically meaningful chunks.
 2.  **Vectorization (Local):** Hugging Face's `all-MiniLM-L6-v2` model converts each text chunk into a mathematical vector, capturing its semantic meaning.
 3.  **Database (Local):** These vectors are loaded into a **FAISS** vector database, which is optimized for high-speed similarity search.
 4.  **Query (User):** The user asks a question, e.g., "What is the drone's flight range?"
@@ -54,7 +60,7 @@ When a user asks a question, the following steps occur in the background:
 
 ---
 
-### Challenges Faced & Solutions Implemented
+## Challenges Faced & Solutions Implemented
 
 This project went beyond a simple tutorial, presenting real-world engineering problems that required practical solutions.
 
@@ -74,7 +80,7 @@ By using Streamlit's `@st.cache_resource` decorator on the functions responsible
 
 ---
 
-### 🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 * **Python:** The core language for the project.
 * **LangChain:** The main framework used to orchestrate the entire RAG pipeline, connecting the LLM, retriever, and prompts.
@@ -85,7 +91,7 @@ By using Streamlit's `@st.cache_resource` decorator on the functions responsible
 
 ---
 
-### ⚙️ Setup and Running Locally
+## ⚙️ Setup and Running Locally
 
 To run this project on your local machine:
 
@@ -98,7 +104,7 @@ To run this project on your local machine:
 2.  **Create and activate the virtual environment:**
     ```bash
     python -m venv venv
-    source vK/bin/activate  # For MacOS/Linux
+    source venv/bin/activate  # For MacOS/Linux
     # venv\Scripts\activate  # For Windows
     ```
 
