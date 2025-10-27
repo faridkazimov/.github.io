@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building a Reliable AI: The RAG Q&A System
+title: "Building a Reliable AI: The RAG Q&A System"
 date: 2025-10-28 00:15:00 +0100
 description: A portfolio project demonstrating a RAG architecture using LangChain, FAISS, and Streamlit to eliminate LLM hallucinations.
 categories:  - Projects  - AI  - Portfolio
