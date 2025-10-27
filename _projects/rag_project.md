@@ -1,31 +1,14 @@
 ---
 layout: page
 title: Building a Reliable AI: The RAG Q&A System
+date: 2025-10-28 00:15:00 +0100
 description: A portfolio project demonstrating a RAG architecture using LangChain, FAISS, and Streamlit to eliminate LLM hallucinations.
-img: assets/img/project-covers/rag-project-cover.png # (Kapak resminizi buraya ekleyin)
-importance: 1
-category: AI / NLP
+categories:  - Projects  - AI  - Portfolio
+tags:  - Python  - LLM  - RAG  - LangChain  - Streamlit  - FAISS  - OpenAI  - Prompt Engineering
 github: https://github.com/faridkazimov/rag_project
 demo: https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/
-tags:
-  - Python
-  - LLM
-  - RAG
-  - LangChain
-  - Streamlit
-  - FAISS
-  - OpenAI
-  - Prompt Engineering
+thumbnail: /assets/img/project-covers/rag-project-cover.png # (Make sure to uncomment this and add an image to this path)
 ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/rag_project_demo.gif" title="Project Demo GIF" class="img-fluid rounded z-depth-1" %} 
-        </div>
-</div>
-<div class="caption">
-    A live demo of the project's Streamlit interface.
-</div>
 
 Despite their immense capabilities, Large Language Models (LLMs) suffer from a critical weakness: **hallucination**. This is the tendency to confidently produce false or fabricated information when they don't know an answer. This project was developed to provide a practical solution to this core problem.
 
@@ -35,7 +18,7 @@ It is an interactive web application that uses the **Retrieval-Augmented Generat
 
 ---
 
-## Project Aim & The Problem It Solves
+### Project Aim & The Problem It Solves
 
 One of the biggest hurdles to enterprise AI adoption is trust. When a company needs an AI system to answer questions about its internal documents, technical manuals, or legal texts, the answers must be 100% accurate and based *only* on those documents.
 
@@ -43,11 +26,11 @@ A standard LLM, when asked, "What was Project Titan's budget?", might invent a n
 
 ---
 
-## System Architecture: The Journey of a Question
+### System Architecture: The Journey of a Question
 
 When a user asks a question, the following steps occur in the background:
 
-1.  **Data Preparation (One-time):** The reference document is loaded and split into small, semantically meaningful chunks.
+1.  **Data Preparation (One-time):** The reference `knowledge_base.txt` file is loaded and split into small, semantically meaningful chunks.
 2.  **Vectorization (Local):** Hugging Face's `all-MiniLM-L6-v2` model converts each text chunk into a mathematical vector, capturing its semantic meaning.
 3.  **Database (Local):** These vectors are loaded into a **FAISS** vector database, which is optimized for high-speed similarity search.
 4.  **Query (User):** The user asks a question, e.g., "What is the drone's flight range?"
@@ -57,10 +40,9 @@ When a user asks a question, the following steps occur in the background:
     > **Question:** "What is the drone's flight range?"
     > **Instruction:** "Answer the question based *only* on the context provided above."
 7.  **Generation:** This augmented prompt is sent to OpenAI's LLM. Instead of hallucinating, the model generates its answer by synthesizing the information found in the provided context.
-
 ---
 
-## Challenges Faced & Solutions Implemented
+### Challenges Faced & Solutions Implemented
 
 This project went beyond a simple tutorial, presenting real-world engineering problems that required practical solutions.
 
@@ -70,6 +52,7 @@ During initial tests, the system would answer questions that were completely unr
 **Solution: Strict Prompt Engineering**
 To prevent this "leakage," a custom `PromptTemplate` was added to the `RetrievalQA` chain. This template gives the LLM a non-negotiable instruction:
 > "Use the following pieces of context to answer the question. **If you don't find the answer in the context, just say 'This information is not available in the provided document.' Do not use your own knowledge.**"
+
 This ensured the system remained reliable and strictly bound to the document.
 
 #### Challenge 2: Performance and User Experience
@@ -80,7 +63,7 @@ By using Streamlit's `@st.cache_resource` decorator on the functions responsible
 
 ---
 
-## 🛠️ Technologies Used
+### 🛠️ Technologies Used
 
 * **Python:** The core language for the project.
 * **LangChain:** The main framework used to orchestrate the entire RAG pipeline, connecting the LLM, retriever, and prompts.
@@ -91,7 +74,7 @@ By using Streamlit's `@st.cache_resource` decorator on the functions responsible
 
 ---
 
-## ⚙️ Setup and Running Locally
+### ⚙️ Setup and Running Locally
 
 To run this project on your local machine:
 
@@ -100,22 +83,18 @@ To run this project on your local machine:
     git clone [https://github.com/faridkazimov/rag_project](https://github.com/faridkazimov/rag_project)
     cd rag_project
     ```
-
 2.  **Create and activate the virtual environment:**
     ```bash
     python -m venv venv
     source venv/bin/activate  # For MacOS/Linux
     # venv\Scripts\activate  # For Windows
     ```
-
 3.  **Install the necessary libraries:**
     ```bash
     pip install -r requirements.txt
     ```
-
 4.  **Set up your API key:**
     Create a file named `.env` and add your key inside it in the format: `OPENAI_API_KEY="sk-..."`
-
 5.  **Run the application:**
     ```bash
     streamlit run streamlit_app.py
