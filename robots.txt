@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://feridkazimov.com/sitemap.xml
+Sitemap: https://faridkazimov.com/sitemap.xml
