@@ -52,10 +52,13 @@ When a user asks a question, the following steps occur in the background:
 4.  **Query (User):** The user asks a question, e.g., "What is the drone's flight range?"
 5.  **Retrieval:** The system's "Librarian," our FAISS database, also converts the user's question into a vector and instantly finds the most semantically similar text chunks (the "context") from the document.
 6.  **Augmentation:** The system prepares a special prompt for the LLM:
-  > **Context:** "[...The relevant text chunk retrieved from FAISS...]"
-  > **Question:** "What is the drone's flight range?"
-  > **Instruction:** "Answer the question based *only* on the context provided above."
+
+    > **Context:** "[...The relevant text chunk retrieved from FAISS...]"
+    > **Question:** "What is the drone's flight range?"
+    > **Instruction:** "Answer the question based *only* on the context provided above."
+
 7.  **Generation:** This augmented prompt is sent to OpenAI's LLM. Instead of hallucinating, the model generates its answer by synthesizing the information found in the provided context.
+
 ---
 
 ### Challenges Faced & Solutions Implemented
