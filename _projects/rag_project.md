@@ -2,12 +2,28 @@
 layout: page
 title: "Building a Reliable AI: The RAG Q&A System"
 date: 2025-10-28 00:15:00 +0100
-description: A portfolio project demonstrating a RAG architecture using LangChain, FAISS, and Streamlit to eliminate LLM hallucinations.
-categories:  - Projects  - AI  - Portfolio
-tags:  - Python  - LLM  - RAG  - LangChain  - Streamlit  - FAISS  - OpenAI  - Prompt Engineering
+description: A portfolio project demonstrating a RAG architecture...
+
+# DÜZELTİLMİŞ ALAN:
+categories:
+  - Projects
+  - AI
+  - Portfolio
+
+# DÜZELTİLMİŞ ALAN:
+tags:
+  - Python
+  - LLM
+  - RAG
+  - LangChain
+  - Streamlit
+  - FAISS
+  - OpenAI
+  - Prompt Engineering
+
 github: https://github.com/faridkazimov/rag_project
 demo: https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/
-thumbnail: /assets/img/project-covers/rag-project-cover.png # (Make sure to uncomment this and add an image to this path)
+thumbnail: /assets/img/project-covers/rag-project-cover.png
 ---
 
 Despite their immense capabilities, Large Language Models (LLMs) suffer from a critical weakness: **hallucination**. This is the tendency to confidently produce false or fabricated information when they don't know an answer. This project was developed to provide a practical solution to this core problem.
