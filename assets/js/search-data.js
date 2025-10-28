@@ -7,53 +7,53 @@ ninja.data = [{
     title: "about",
     section: "Navigation",
     handler: () => {
-      window.location.href = "/.github.io/";
+      window.location.href = "/";
     },
   },{id: "nav-blog",
           title: "blog",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/.github.io/blog/";
+            window.location.href = "/blog/";
           },
         },{id: "nav-publications",
           title: "publications",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/.github.io/publications/";
+            window.location.href = "/publications/";
           },
         },{id: "nav-projects",
           title: "projects",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/.github.io/projects/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "repositories",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/.github.io/repositories/";
+            window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "cv",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/.github.io/cv/";
+            window.location.href = "/cv/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/.github.io/books/the_godfather/";
+              window.location.href = "/books/the_godfather/";
             },},{id: "projects-building-a-reliable-ai-the-rag-q-amp-a-system",
           title: 'Building a Reliable AI: The RAG Q&amp;amp;A System',
           description: "A portfolio project demonstrating a RAG architecture...",
           section: "Projects",handler: () => {
-              window.location.href = "/.github.io/projects/rag_project/";
+              window.location.href = "/projects/rag_project/";
             },},{
         id: 'social-email',
         title: 'email',
