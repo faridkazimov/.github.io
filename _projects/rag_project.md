@@ -26,11 +26,11 @@ demo: https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/
 thumbnail: /assets/img/project-covers/rag-project-cover.png
 ---
 
-Despite their immense capabilities, Large Language Models (LLMs) suffer from a critical weakness: **hallucination**. This is the tendency to confidently produce false or fabricated information when they don't know an answer. This project was developed to provide a practical solution to this core problem.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/)
+
+Despite their immense capabilities, Large Language Models (LLMs) suffer from a critical weakness: **hallucination**. This is the tendency to confidently produce false or fabricated information when they don’t know an answer. This project was developed to provide a practical solution to this core problem.
 
 It is an interactive web application that uses the **Retrieval-Augmented Generation (RAG)** architecture to answer questions based **only on the content of a provided document**, ensuring the answers are reliable and grounded in fact.
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ragproject-a9dq4num5grltk6nxhjcby.streamlit.app/)
 
 ---
 
@@ -38,7 +38,7 @@ It is an interactive web application that uses the **Retrieval-Augmented Generat
 
 One of the biggest hurdles to enterprise AI adoption is trust. When a company needs an AI system to answer questions about its internal documents, technical manuals, or legal texts, the answers must be 100% accurate and based *only* on those documents.
 
-A standard LLM, when asked, "What was Project Titan's budget?", might invent a number based on its general internet knowledge. This project solves that problem by **grounding** the LLM using RAG. The system is given a single source of truth, and the AI is forced to use *only* that document's content to generate its answer.
+A standard LLM, when asked, "What was Project Titan’s budget?", might invent a number based on its general internet knowledge. This project solves that problem by **grounding** the LLM using RAG. The system is given a single source of truth, and the AI is forced to use *only* that document’s content to generate its answer.
 
 ---
 
