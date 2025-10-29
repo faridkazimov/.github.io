@@ -16,8 +16,8 @@ tags:
   - Agents
   - Streamlit
   - StateMachine
-github: https://github.com/faridkazimov/ai-research-agent # <= REPLACE THIS
-demo: https://ai-research-agent-lrtyftta8ifzrmkcesnxom.streamlit.app/ # <= REPLACE THIS
+github: https://github.com/faridkazimov/ai-research-agent # <= Repo Adınızı kullandım
+demo: https://ai-research-agent-lrtyftta8ifzrmkcesnxom.streamlit.app/ # <= Demo linkinizi kullandım
 importance: 1
 ---
 
