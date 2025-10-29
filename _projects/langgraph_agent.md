@@ -3,8 +3,19 @@ layout: page
 title: "🧠 Autonomous Research Agent (LangGraph AI)"
 date: 2025-11-20 00:00:00 +0100
 description: An advanced AI agent built with LangGraph (LangChain 1.0+) that can autonomously reason, plan, execute tools, and synthesize complex, real-time answers.
-categories:  - Projects  - AI  - Deep Learning  - Agent
-tags:  - Python  - LangGraph  - LangChain  - LLM  - Agents  - Streamlit  - StateMachine
+categories:
+- Projects
+- AI
+- Deep Learning
+- Agent
+tags:
+- Python
+- LangGraph
+- LangChain
+- LLM
+- Agents
+- Streamlit
+- StateMachine
 github: https://github.com/faridkazimov/YOUR_LANGGRAPH_REPO_NAME # <= REPLACE THIS
 demo: https://YOUR_LANGGRAPH_DEMO_LINK.streamlit.app/ # <= REPLACE THIS
 thumbnail: /assets/img/project-covers/langgraph_agent_cover.png
