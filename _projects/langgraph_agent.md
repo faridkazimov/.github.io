@@ -16,9 +16,8 @@ tags:
 - Agents
 - Streamlit
 - StateMachine
-github: https://github.com/faridkazimov/YOUR_LANGGRAPH_REPO_NAME # <= REPLACE THIS
-demo: https://YOUR_LANGGRAPH_DEMO_LINK.streamlit.app/ # <= REPLACE THIS
-thumbnail: /assets/img/project-covers/langgraph_agent_cover.png
+github: https://github.com/faridkazimov/ai-research-agent # <= REPLACE THIS
+demo: https://ai-research-agent-lrtyftta8ifzrmkcesnxom.streamlit.app/ # <= REPLACE THIS
 importance: 1
 ---
 
