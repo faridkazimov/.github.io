@@ -65,7 +65,7 @@ This cyclical flow (**agent -> call\_tool -> agent -> END**) allows the agent to
 
 ---
 
-### 🗺️ Future Roadmap & Advanced Implementation
+### 🗺️ Future Roadmap & Advanced Implementation.
 
 #### 1. Add Conversational Memory (Stateless to Stateful)
 The **`AgentState`** is already built for memory! The only change needed is in the **Streamlit UI code**: by passing the entire conversation history (`messages: Annotated[Sequence[BaseMessage], operator.add]`) to the agent on every turn, the LLM will remember past context and questions.
