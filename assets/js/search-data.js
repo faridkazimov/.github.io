@@ -49,6 +49,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
             },},{id: "projects-building-a-reliable-ai-the-rag-q-amp-a-system",
           title: 'Building a Reliable AI: The RAG Q&amp;amp;A System',
           description: "A portfolio project demonstrating a RAG architecture...",
