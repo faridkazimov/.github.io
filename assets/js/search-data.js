@@ -54,16 +54,16 @@ ninja.data = [{
           description: "another without an image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-building-a-reliable-ai-the-rag-q-amp-a-system",
-          title: 'Building a Reliable AI: The RAG Q&amp;amp;A System',
-          description: "A portfolio project demonstrating a RAG architecture...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/rag_project/";
             },},{id: "projects-autonomous-research-agent-langgraph-ai",
           title: '🧠 Autonomous Research Agent (LangGraph AI)',
           description: "An advanced AI agent built with LangGraph (LangChain 1.0+) that can autonomously reason, plan, execute tools, and synthesize complex, real-time answers.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/langgraph_agent/";
+            },},{id: "projects-building-a-reliable-ai-the-rag-q-amp-a-system",
+          title: 'Building a Reliable AI: The RAG Q&amp;amp;A System',
+          description: "A portfolio project demonstrating a RAG architecture...",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rag_project/";
             },},{
         id: 'social-email',
         title: 'email',
