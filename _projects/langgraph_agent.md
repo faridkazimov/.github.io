@@ -110,7 +110,7 @@ This cyclical flow (`agent` -> `call_tool` -> `agent` -> `END`) allows the agent
 **1. Clone the Repository:**
 ```bash
 git clone https://github.com/faridkazimov/ai-research-agent
-    cd ai-research-agent
+cd ai-research-agent
 ```
 **2. Create and Activate a Virtual Environment:**
 
