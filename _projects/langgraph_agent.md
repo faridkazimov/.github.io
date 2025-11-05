@@ -26,7 +26,11 @@ demo: https://ai-research-agent-lrtyftta8ifzrmkcesnxom.streamlit.app/
 
 This project is an **autonomous AI Research Assistant** built using **LangChain 1.0+**, **LangGraph**, and **Streamlit**.
 
-Unlike a standard RAG (Retrieval-Augmented Generation) system that only answers questions based on static documents, this agent can perform complex, cyclical reasoning: **Reason**, **Plan**, **Act** (using tools), and **Synthesize** information to provide comprehensive, real-time answers.
+Unlike a standard RAG (Retrieval-Augmented Generation) system that only answers questions based on static documents, this agent can:
+1.  **Reason:** Autonomously understand complex, multi-step user queries.
+2.  **Plan:** Break down the problem into a sequence of required actions.
+3.  **Act:** Use external tools (like live web search) to gather dynamic, real-time data.
+4.  **Synthesize:** Combine all the gathered information to provide a comprehensive, final answer.
 
 The agent is deployed with an interactive Streamlit UI and includes a simple rate-limiting feature (4 questions per session) to manage API costs.
 
