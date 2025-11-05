@@ -68,16 +68,26 @@ The graph consists of:
 
 This cyclical flow (`agent` -> `call_tool` -> `agent` -> `END`) allows the agent to call tools multiple times, reflect on the results, and solve complex problems.
 
-<div class="mermaid">
-graph TD
-    A[Start: User Input] --> B(agent_node);
-    B -- Tool Call? --> C{should_continue};
-    C -- Yes --> D[tool_node];
-    D --> B;
-    C -- No --> E[END: Final Answer];
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Capture.PNG" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 
 ---
+
+### ✨ Features
+
+* **Autonomous Reasoning:** Built with `LangGraph` for a robust "Reason -> Act -> Observe" loop. The agent decides for itself when to search vs. when to answer.
+
+* **Dynamic Tool Use:** Integrated with `TavilySearch` for real-time financial data, market caps, and simple math calculations.
+
+* **Interactive UI:** A clean, chat-based interface built with `Streamlit`.
+
+* **Cost Control (Rate Limiting):** Includes a `Streamlit` session state counter to limit users to 4 questions, preventing API key abuse.
+
+* **Modern Tech Stack:** Built on the latest `langchain 1.0+` libraries (`langchain-core`, `langchain-openai`, `langgraph`) and a cost-effective, powerful LLM (`gpt-4o-mini`).
+
 
 ### 🗺️ Future Roadmap & Advanced Implementation.
 
