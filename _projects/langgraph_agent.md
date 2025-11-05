@@ -38,7 +38,7 @@ The agent is deployed with an interactive Streamlit UI and includes a simple rat
 
 ## 🎥 Live Demo (Example Interaction)
 
-*(**Tavsiye:** Buraya uygulamanızın çalışan bir GIF'ini koyun. Bu, projenizi 10 kat daha profesyonel gösterir. [LICEcap](https://www.cockos.com/licecap/) veya [GIPHY Capture](https://giphy.com/apps/giphycapture) gibi araçlarla kolayca oluşturabilirsiniz.)*
+
 
 **User:** "What company has a higher market cap right now, NVIDIA or Apple? And what's the difference in US dollars?"
 
@@ -52,23 +52,29 @@ The agent is deployed with an interactive Streamlit UI and includes a simple rat
 
 ---
 
-### 🏛️ Core Architecture (LangGraph State Machine)
+### 🏛️ Core Architecture (How it Works)
 
-This project uses **LangGraph** to define the agent's logic as a **"state machine" or graph**. This modern architecture replaces older `AgentExecutor` patterns, allowing for complex, cyclical, and stateful reasoning required for true autonomous action.
+This project uses **LangGraph** to define the agent's logic as a "state machine" or graph. This is the modern replacement for the older `AgentExecutor` class and allows for complex, cyclical, and stateful reasoning.
 
-#### Key Components:
+The graph consists of:
+1.  **AgentState:** A simple dictionary (`TypedDict`) that defines the "memory" or "state" of our graph. It primarily tracks the list of messages.
+2.  **Nodes:**
+    * `agent_node`: The "brain" of the operation. It calls the LLM (`gpt-4o-mini`) to decide what to do next (call a tool or generate a final answer).
+    * `tool_node`: The "action". This is a prebuilt `ToolNode` that executes any tool calls requested by the `agent_node` (e.g., performs the Tavily search).
+3.  **Conditional Edges:**
+    * The `should_continue` function acts as the router. After the `agent_node` runs, this edge checks if the LLM requested a tool.
+    * **If YES (tool call exists):** The graph routes to the `tool_node`.
+    * **If NO (no tool call):** The graph routes to `END`, and the agent provides its final answer.
 
-* **AgentState (Memory):** A simple dictionary that defines the "memory" or **state** of our graph, primarily tracking the list of messages in the conversation.
-* **agent\_node (The Brain):** Calls the **LLM (`gpt-4o-mini`)** to decide what to do next: either call an external tool or generate a final answer.
-* **tool\_node (The Action):** Executes any tool calls requested by the `agent_node` (e.g., performs the real-time Tavily web search).
+This cyclical flow (`agent` -> `call_tool` -> `agent` -> `END`) allows the agent to call tools multiple times, reflect on the results, and solve complex problems.
 
-#### Conditional Edges (The Router):
-
-The **`should_continue`** function acts as the **router**. After the `agent_node` runs, this edge checks the LLM's output:
-* **If Tool Call Exists (YES):** The graph routes back to the **`tool\_node`** for action.
-* **If Final Answer Exists (NO):** The graph routes to **`END`**.
-
-This cyclical flow (**agent -> call\_tool -> agent -> END**) allows the agent to call tools multiple times, reflect on the results, and solve problems that require multiple steps of data gathering.
+```mermaid
+graph TD
+    A[Start: User Input] --> B(agent_node);
+    B -- Tool Call? --> C{should_continue};
+    C -- Yes --> D[tool_node];
+    D --> B;
+    C -- No --> E[END: Final Answer];
 
 ---
 
