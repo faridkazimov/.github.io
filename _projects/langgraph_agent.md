@@ -89,16 +89,106 @@ This cyclical flow (`agent` -> `call_tool` -> `agent` -> `END`) allows the agent
 * **Modern Tech Stack:** Built on the latest `langchain 1.0+` libraries (`langchain-core`, `langchain-openai`, `langgraph`) and a cost-effective, powerful LLM (`gpt-4o-mini`).
 
 
-### 🗺️ Future Roadmap & Advanced Implementation.
+### 🛠️ Tech Stack
+* **Language:** Python 3.11+
 
-#### 1. Add Conversational Memory (Stateless to Stateful)
-The **`AgentState`** is already built for memory! The only change needed is in the **Streamlit UI code**: by passing the entire conversation history (`messages: Annotated[Sequence[BaseMessage], operator.add]`) to the agent on every turn, the LLM will remember past context and questions.
+* **Agent Framework:** LangChain 1.0+
 
-#### 2. Add Custom Tools (e.g., Private RAG Tool)
-The agent currently only searches the **public web**. By simply decorating a custom Python function with `@tool`, we can add new tools, like a **`rag_search_tool`** to query private documents or PDFs. The agent will then **autonomously choose** between searching the web (TavilySearch) or your documents based on the user's need.
+* **Reasoning Engine:** LangGraph
 
+* **LLM (Brain):** OpenAI `gpt-4o-mini` (recommended for cost/performance) or `gpt-4o`
+
+* **Tools:** TavilySearch (Live Web Search)
+
+* **Interface (UI):** Streamlit
+
+* **Environment Management:** `python-dotenv`
+
+
+### 🚀 Setup and Installation
+
+**1. Clone the Repository:**
+```
+git clone [https://github.com/](https://github.com/)[YOUR-USERNAME]/[YOUR-REPO-NAME].git
+cd [YOUR-REPO-NAME]
+```
+**2. Create and Activate a Virtual Environment:**
+
+```
+python -m venv ajan-env
+# On Windows
+.\ajan-env\Scripts\activate
+# On macOS/Linux
+source ajan-env/bin/activate
+```
+**3. Install Dependencies:**
+```
+pip install -r requirements.txt
+```
+**4. Create Your .env File:** In the root of the project, create a file named .env and add your secret API keys:
+```
+OPENAI_API_KEY="sk-..."
+TAVILY_API_KEY="tvly-..."
+```
+**5. Run the Streamlit App:**
+```
+streamlit run agent_app.py
+```
+Your browser will automatically open to the app's local URL (usually `http://localhost:8501`).
+
+
+### 1. Add Conversational Memory
+**The Challenge:** The agent is currently stateless. If you ask "What is NVIDIA's market cap?" and then "What about Apple's?", it won't remember you were comparing companies.
+
+**The Solution (`LangGraph`):** The `AgentState` is already built for memory! The `messages: Annotated[Sequence[BaseMessage], operator.add]` line ensures that messages are added to the state, not replaced. The only change needed is in the Streamlit UI code:
+
+* Store the actual `BaseMessage` objects (like `HumanMessage`, `AIMessage`) in `st.session_state["messages"]`, not just dictionaries.
+
+* When calling the agent, pass the entire history: `inputs = {"messages": st.session_state.messages}`. This will send the full conversation context to the LLM on every turn, allowing it to remember the past.
+
+### 2. Add Custom Tools (e.g., RAG Tool)
+* ** The Challenge:** The agent can only search the public web. It knows nothing about my private documents.
+
+* ** The Solution (`@tool` decorator):** We can create a new tool for the agent by simply decorating a Python function.
+
+**Example:**
+```
+from langchain_core.tools import tool
+
+# (Assuming you have a RAG function from another project)
+def my_rag_retriever(query: str) -> str:
+    """Use this to find information in private company documents or PDFs."""
+    # ... your RAG retrieval logic here ...
+    docs = vectorstore.similarity_search(query)
+    return " ".join([doc.page_content for doc in docs])
+
+@tool
+def rag_search_tool(query: str) -> str:
+    """Searches private company documents for specific information."""
+    return my_rag_retriever(query)
+
+# Then, just add it to the 'tools' list in agent_app.py:
+tools = [search_tool, rag_search_tool]
+```
+The agent will now autonomously choose between searching the web (`TavilySearch`) or your private documents (`rag_search_tool`) based on the user's question.
 #### 3. Add Human-in-the-Loop (Approval Step)
-To mitigate the risk of autonomous actions (like calling an expensive tool), we can add a **"pause" button** to the graph. The `should_continue` edge can return a state like **`"human_approval"`**, which interrupts the graph flow. The Streamlit UI can then display confirmation buttons ([Yes] / [No]) before allowing the agent to proceed to the tool call.
+* **The Challenge:** The agent acts autonomously. What if it decides to call a very expensive tool or perform a dangerous action (like deleting a file, if we gave it that tool)?
+
+* **The Solution (`LangGraph` Edges):** We can add a "pause" button to the graph.
+
+  1. Modify the should_continue function to return a third string, `"human_approval"`, instead of `"call_tool"` if the tool is sensitive.
+
+  2. Add a new node (`workflow.add_node("human_approval", human_approval_node)`) and a new conditional edge.
+
+  3. This new node would pause the graph. In Streamlit, the app would show "[Yes] / [No]" buttons. If the user clicks "Yes", the app would `resume` the graph execution, which would then proceed to the `tool_node`.
 
 #### 4. Implement True Response Streaming (Word-by-Word)
-To improve user experience, the Streamlit code can be refactored to use **`app.stream()`** instead of `app.invoke()`. By using a Python generator to yield output chunks to Streamlit's built-in **`st.write_stream()`**, the agent's final answer will render word-by-word, similar to ChatGPT.
+* **The Challenge:** The UI shows a "Thinking..." spinner and dumps the whole answer at once. This feels slow and less interactive than ChatGPT.
+
+* **The Solution (`app.stream()` + `st.write_stream()`):**
+
+  1. Instead of using `final_state = app.invoke(inputs)` in the Streamlit code...
+
+  2. We will use `response_stream = app.stream(inputs, stream_mode="values")`.
+
+  3. We then iterate over this `response_stream` and use Streamlit's built-in `st.write_stream()` function. This will render the agent's final answer (from the last `agent_node` step) word-by-word as it's being generated by the LLM.
