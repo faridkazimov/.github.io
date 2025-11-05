@@ -108,13 +108,13 @@ This cyclical flow (`agent` -> `call_tool` -> `agent` -> `END`) allows the agent
 ### 🚀 Setup and Installation
 
 **1. Clone the Repository:**
-```
-git clone [https://github.com/](https://github.com/)[YOUR-USERNAME]/[YOUR-REPO-NAME].git
-cd [YOUR-REPO-NAME]
+```bash
+git clone https://github.com/faridkazimov/ai-research-agent
+    cd ai-research-agent
 ```
 **2. Create and Activate a Virtual Environment:**
 
-```
+```bash
 python -m venv ajan-env
 # On Windows
 .\ajan-env\Scripts\activate
@@ -122,16 +122,16 @@ python -m venv ajan-env
 source ajan-env/bin/activate
 ```
 **3. Install Dependencies:**
-```
+```bash
 pip install -r requirements.txt
 ```
 **4. Create Your .env File:** In the root of the project, create a file named .env and add your secret API keys:
-```
+```bash
 OPENAI_API_KEY="sk-..."
 TAVILY_API_KEY="tvly-..."
 ```
 **5. Run the Streamlit App:**
-```
+```bash
 streamlit run agent_app.py
 ```
 Your browser will automatically open to the app's local URL (usually `http://localhost:8501`).
@@ -152,7 +152,7 @@ Your browser will automatically open to the app's local URL (usually `http://loc
 * **The Solution (`@tool` decorator):** We can create a new tool for the agent by simply decorating a Python function.
 
 **Example:**
-```
+```bash
 from langchain_core.tools import tool
 
 # (Assuming you have a RAG function from another project)
