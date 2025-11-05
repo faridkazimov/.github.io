@@ -137,7 +137,7 @@ streamlit run agent_app.py
 Your browser will automatically open to the app's local URL (usually `http://localhost:8501`).
 
 ###  🗺️ Future Roadmap & Advanced Implementation
-** 1. Add Conversational Memory**
+**1. Add Conversational Memory**
 * **The Challenge:** The agent is currently stateless. If you ask "What is NVIDIA's market cap?" and then "What about Apple's?", it won't remember you were comparing companies.
 
 * **The Solution (`LangGraph`):** The `AgentState` is already built for memory! The `messages: Annotated[Sequence[BaseMessage], operator.add]` line ensures that messages are added to the state, not replaced. The only change needed is in the Streamlit UI code:
@@ -146,7 +146,7 @@ Your browser will automatically open to the app's local URL (usually `http://loc
 
   2. When calling the agent, pass the entire history: `inputs = {"messages": st.session_state.messages}`. This will send the full conversation context to the LLM on every turn, allowing it to remember the past.
 
-** 2. Add Custom Tools (e.g., RAG Tool)**
+**2. Add Custom Tools (e.g., RAG Tool)**
 * **The Challenge:** The agent can only search the public web. It knows nothing about my private documents.
 
 * **The Solution (`@tool` decorator):** We can create a new tool for the agent by simply decorating a Python function.
