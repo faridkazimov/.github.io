@@ -68,13 +68,14 @@ The graph consists of:
 
 This cyclical flow (`agent` -> `call_tool` -> `agent` -> `END`) allows the agent to call tools multiple times, reflect on the results, and solve complex problems.
 
-```mermaid
+<div class="mermaid">
 graph TD
     A[Start: User Input] --> B(agent_node);
     B -- Tool Call? --> C{should_continue};
     C -- Yes --> D[tool_node];
     D --> B;
     C -- No --> E[END: Final Answer];
+</div>
 
 ---
 
