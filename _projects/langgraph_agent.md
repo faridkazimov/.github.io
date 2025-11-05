@@ -32,13 +32,41 @@ The agent is deployed with an interactive Streamlit UI and includes a simple rat
 
 ---
 
-### 🎥 Live Demo (Example Interaction)
+<section class="max-w-4xl mx-auto my-12 p-6 bg-white rounded-2xl shadow">
+  <h2 class="text-2xl font-bold mb-4">🎥 Live Demo (Example Interaction)</h2>
+  <p class="text-gray-700 mb-6">
+    Bu örnek, agent’in çok adımlı akıl yürütme (<em>multi-step reasoning</em>) yeteneğini göstermektedir:
+  </p>
 
-To illustrate the agent's multi-step reasoning capability:
+  <div class="overflow-x-auto">
+    <table class="min-w-full border border-gray-200 text-sm text-left">
+      <thead class="bg-gray-100 font-semibold text-gray-800">
+        <tr>
+          <th class="px-4 py-2 border-b">User Query</th>
+          <th class="px-4 py-2 border-b">Agent's Logic & Actions</th>
+          <th class="px-4 py-2 border-b">Final Answer</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="border-t">
+          <td class="px-4 py-3 font-medium">
+            "What company has a higher market cap right now, NVIDIA or Apple? And what's the difference in US dollars?"
+          </td>
+          <td class="px-4 py-3">
+            <strong>[Action]</strong> tavily_search(query="NVIDIA market cap") → Finds <strong>$4.8T</strong><br>
+            <strong>[Action]</strong> tavily_search(query="Apple market cap") → Finds <strong>$3.9T</strong><br>
+            <strong>[Synthesizing]</strong>
+          </td>
+          <td class="px-4 py-3">
+            Currently, <strong>NVIDIA</strong> has a higher market cap at approximately <strong>$4.8 trillion</strong>,
+            which is about <strong>$900 billion</strong> more than Apple's <strong>$3.9 trillion</strong>.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-| User Query | Agent's Logic & Actions | Final Answer |
-| :--- | :--- | :--- |
-| **"What company has a higher market cap right now, NVIDIA or Apple? And what's the difference in US dollars?"** | [Action: tavily\_search(query="NVIDIA market cap")] -> Finds $4.8T<br>[Action: tavily\_search(query="Apple market cap")] -> Finds $3.9T<br>[Synthesizing] | "Currently, **NVIDIA** has a higher market cap at approximately **$4.8 trillion**, which is about **$900 billion** more than Apple's $3.9 trillion." |
 
 ---
 
