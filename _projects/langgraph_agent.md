@@ -171,7 +171,7 @@ def rag_search_tool(query: str) -> str:
 tools = [search_tool, rag_search_tool]
 ```
 The agent will now autonomously choose between searching the web (`TavilySearch`) or your private documents (`rag_search_tool`) based on the user's question.
-** 3. Add Human-in-the-Loop (Approval Step)**
+**3. Add Human-in-the-Loop (Approval Step)**
 * **The Challenge:** The agent acts autonomously. What if it decides to call a very expensive tool or perform a dangerous action (like deleting a file, if we gave it that tool)?
 
 * **The Solution (`LangGraph` Edges):** We can add a "pause" button to the graph.
