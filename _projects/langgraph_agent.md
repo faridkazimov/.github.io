@@ -32,23 +32,25 @@ The agent is deployed with an interactive Streamlit UI and includes a simple rat
 
 ---
 
-<section class="max-w-4xl mx-auto my-12 p-6 bg-white rounded-2xl shadow">
-  <h2 class="text-2xl font-bold mb-4">🎥 Live Demo (Example Interaction)</h2>
-  <p class="text-gray-700 mb-6">
+<section class="max-w-4xl mx-auto my-12 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow transition-colors duration-300">
+  <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+    🎥 Live Demo (Example Interaction)
+  </h2>
+  <p class="text-gray-700 dark:text-gray-300 mb-6">
     Bu örnek, agent’in çok adımlı akıl yürütme (<em>multi-step reasoning</em>) yeteneğini göstermektedir:
   </p>
 
   <div class="overflow-x-auto">
-    <table class="min-w-full border border-gray-200 text-sm text-left">
-      <thead class="bg-gray-100 font-semibold text-gray-800">
+    <table class="min-w-full border border-gray-200 dark:border-gray-700 text-sm text-left">
+      <thead class="bg-gray-100 dark:bg-gray-800 font-semibold text-gray-800 dark:text-gray-100">
         <tr>
-          <th class="px-4 py-2 border-b">User Query</th>
-          <th class="px-4 py-2 border-b">Agent's Logic & Actions</th>
-          <th class="px-4 py-2 border-b">Final Answer</th>
+          <th class="px-4 py-2 border-b border-gray-200 dark:border-gray-700">User Query</th>
+          <th class="px-4 py-2 border-b border-gray-200 dark:border-gray-700">Agent's Logic & Actions</th>
+          <th class="px-4 py-2 border-b border-gray-200 dark:border-gray-700">Final Answer</th>
         </tr>
       </thead>
-      <tbody class="text-gray-700">
-        <tr class="border-t">
+      <tbody class="text-gray-700 dark:text-gray-300">
+        <tr class="border-t border-gray-200 dark:border-gray-700">
           <td class="px-4 py-3 font-medium">
             "What company has a higher market cap right now, NVIDIA or Apple? And what's the difference in US dollars?"
           </td>
@@ -66,6 +68,7 @@ The agent is deployed with an interactive Streamlit UI and includes a simple rat
     </table>
   </div>
 </section>
+
 
 
 ---
