@@ -136,20 +136,20 @@ streamlit run agent_app.py
 ```
 Your browser will automatically open to the app's local URL (usually `http://localhost:8501`).
 
+###  🗺️ Future Roadmap & Advanced Implementation
+** 1. Add Conversational Memory**
+* **The Challenge:** The agent is currently stateless. If you ask "What is NVIDIA's market cap?" and then "What about Apple's?", it won't remember you were comparing companies.
 
-### 1. Add Conversational Memory
-**The Challenge:** The agent is currently stateless. If you ask "What is NVIDIA's market cap?" and then "What about Apple's?", it won't remember you were comparing companies.
+* **The Solution (`LangGraph`):** The `AgentState` is already built for memory! The `messages: Annotated[Sequence[BaseMessage], operator.add]` line ensures that messages are added to the state, not replaced. The only change needed is in the Streamlit UI code:
 
-**The Solution (`LangGraph`):** The `AgentState` is already built for memory! The `messages: Annotated[Sequence[BaseMessage], operator.add]` line ensures that messages are added to the state, not replaced. The only change needed is in the Streamlit UI code:
+  1. Store the actual `BaseMessage` objects (like `HumanMessage`, `AIMessage`) in `st.session_state["messages"]`, not just dictionaries.
 
-* Store the actual `BaseMessage` objects (like `HumanMessage`, `AIMessage`) in `st.session_state["messages"]`, not just dictionaries.
+  2. When calling the agent, pass the entire history: `inputs = {"messages": st.session_state.messages}`. This will send the full conversation context to the LLM on every turn, allowing it to remember the past.
 
-* When calling the agent, pass the entire history: `inputs = {"messages": st.session_state.messages}`. This will send the full conversation context to the LLM on every turn, allowing it to remember the past.
+** 2. Add Custom Tools (e.g., RAG Tool)**
+* **The Challenge:** The agent can only search the public web. It knows nothing about my private documents.
 
-### 2. Add Custom Tools (e.g., RAG Tool)
-* ** The Challenge:** The agent can only search the public web. It knows nothing about my private documents.
-
-* ** The Solution (`@tool` decorator):** We can create a new tool for the agent by simply decorating a Python function.
+* **The Solution (`@tool` decorator):** We can create a new tool for the agent by simply decorating a Python function.
 
 **Example:**
 ```
@@ -171,7 +171,7 @@ def rag_search_tool(query: str) -> str:
 tools = [search_tool, rag_search_tool]
 ```
 The agent will now autonomously choose between searching the web (`TavilySearch`) or your private documents (`rag_search_tool`) based on the user's question.
-#### 3. Add Human-in-the-Loop (Approval Step)
+** 3. Add Human-in-the-Loop (Approval Step)**
 * **The Challenge:** The agent acts autonomously. What if it decides to call a very expensive tool or perform a dangerous action (like deleting a file, if we gave it that tool)?
 
 * **The Solution (`LangGraph` Edges):** We can add a "pause" button to the graph.
@@ -182,7 +182,7 @@ The agent will now autonomously choose between searching the web (`TavilySearch`
 
   3. This new node would pause the graph. In Streamlit, the app would show "[Yes] / [No]" buttons. If the user clicks "Yes", the app would `resume` the graph execution, which would then proceed to the `tool_node`.
 
-#### 4. Implement True Response Streaming (Word-by-Word)
+**4. Implement True Response Streaming (Word-by-Word)**
 * **The Challenge:** The UI shows a "Thinking..." spinner and dumps the whole answer at once. This feels slow and less interactive than ChatGPT.
 
 * **The Solution (`app.stream()` + `st.write_stream()`):**
