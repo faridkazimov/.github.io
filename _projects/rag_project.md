@@ -99,7 +99,7 @@ To run this project on your local machine:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/faridkazimov/rag_project](https://github.com/faridkazimov/rag_project)
+    git clone https://github.com/faridkazimov/rag_project
     cd rag_project
     ```
 2.  **Create and activate the virtual environment:**
