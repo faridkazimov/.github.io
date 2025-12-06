@@ -59,6 +59,11 @@ ninja.data = [{
           description: "A portfolio project demonstrating a RAG architecture...",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag_project/";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/traffic-analysis-ai/";
             },},{
         id: 'social-email',
         title: 'email',

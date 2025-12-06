@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h1 id="-key-features">📌 Key Features</h1> <h3 id="-1-rt-detr-transformer-based-detection">🔍 1. RT-DETR Transformer-Based Detection</h3> <ul> <li>High-accuracy transformer detector</li> <li>Detects: <strong>car, truck, bus, motorbike, bicycle</strong> </li> </ul> <h3 id="-2-custom-object-tracking">🧭 2. Custom Object Tracking</h3> <p>A lightweight, frame-to-frame centroid tracker for stable IDs.</p> <h3 id="-3-vehicle-counting">🔢 3. Vehicle Counting</h3> <p>A virtual line detects crossing events.</p> <h3 id="-4-speed-estimation">⚡ 4. Speed Estimation</h3> <ul> <li>Pixel distance per frame</li> <li>Converts to km/h</li> <li>Logged into CSV</li> </ul> <h3 id="-5-red-light-violation-detection">🚨 5. Red-Light Violation Detection</h3> <ul> <li>Detects traffic light color (RED/GREEN)</li> <li>Logs violations automatically</li> </ul> <h3 id="-6-structured-event-logging">📊 6. Structured Event Logging</h3> <p>Exports:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>results/
+├── traffic_events_core.csv
+└── traffic_events_core.json
+</code></pre></div></div> <p>Each log entry contains:</p> <ul> <li>Frame</li> <li>Timestamp</li> <li>Vehicle ID</li> <li>Vehicle class</li> <li>Speed</li> <li>Event type</li> <li>Light state</li> </ul> <h3 id="-7-llm-powered-traffic-summary">🧠 7. LLM-Powered Traffic Summary</h3> <p>Using <code class="language-plaintext highlighter-rouge">gpt-4o-mini</code>, the system generates a <strong>professional traffic analysis report</strong>.</p> <hr> <h1 id="-project-structure">🏗 Project Structure</h1> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>traffic-analysis-ai/
+├── src/
+│   ├── traffic_core.py      # Vision pipeline (video → logs)
+│   └── llm_report.py        # LLM report generator
+├── data/                    # Input videos (ignored in Git)
+├── results/                 # Output video + event logs (ignored)
+├── requirements.txt
+├── .env                     # OpenAI key (not committed)
+├── .gitignore
+└── README.md
+</code></pre></div></div> <hr> <h1 id="-tech-stack">🛠 Tech Stack</h1> <table> <thead> <tr> <th>Component</th> <th>Technology</th> </tr> </thead> <tbody> <tr> <td>Object Detection</td> <td>RT-DETR (Ultralytics)</td> </tr> <tr> <td>Tracking</td> <td>Custom centroid tracker</td> </tr> <tr> <td>Speed Estimation</td> <td>Pixel → meter conversion</td> </tr> <tr> <td>Traffic Light Detection</td> <td>HSV thresholding</td> </tr> <tr> <td>Event Logging</td> <td>CSV + JSON</td> </tr> <tr> <td>LLM</td> <td>gpt-4o-mini</td> </tr> <tr> <td>Languages</td> <td>Python, OpenCV</td> </tr> <tr> <td>Deployment</td> <td>Standalone scripts / Colab</td> </tr> </tbody> </table> <hr> <h1 id="-getting-started">🚀 Getting Started</h1> <h2 id="1️⃣-clone-repository">1️⃣ Clone Repository</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your-username&gt;/traffic-analysis-ai.git
+<span class="nb">cd </span>traffic-analysis-ai
+</code></pre></div></div> <h2 id="2️⃣-install-dependencies">2️⃣ Install Dependencies</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div> <h2 id="3️⃣-add-your-traffic-video">3️⃣ Add Your Traffic Video</h2> <p>Place your input video here:</p> <p>data/traffic.mp4</p> <p>(or update the path in <code class="language-plaintext highlighter-rouge">src/traffic_core.py</code>).</p> <h2 id="4️⃣-add-your-openai-api-key">4️⃣ Add Your OpenAI API Key</h2> <p>Create a <code class="language-plaintext highlighter-rouge">.env</code> file in the project root:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"OPENAI_API_KEY=your_openai_key_here"</span> <span class="o">&gt;</span> .env
+</code></pre></div></div> <blockquote> <p><code class="language-plaintext highlighter-rouge">.env</code> is ignored by Git for security.</p> </blockquote> <hr> <h1 id="-run-traffic-analysis">🎬 Run Traffic Analysis</h1> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python src/traffic_core.py
+</code></pre></div></div> <p>This will generate:</p> <ul> <li><code class="language-plaintext highlighter-rouge">results/output_core.mp4</code></li> <li><code class="language-plaintext highlighter-rouge">results/traffic_events_core.csv</code></li> <li><code class="language-plaintext highlighter-rouge">results/traffic_events_core.json</code></li> </ul> <hr> <h1 id="-generate-llm-traffic-report">🧠 Generate LLM Traffic Report</h1> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python src/llm_report.py
+</code></pre></div></div> <p>Sample console output:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traffic during the analyzed period was moderately dense...
+Average speeds remained within a safe range...
+One red-light violation was detected...
+Recommended improvements include...
+</code></pre></div></div> <hr> <h1 id="-sample-log-output-csv">📈 Sample Log Output (CSV)</h1> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>frame,time_sec,track_id,class_name,speed_kmh,event_type,light_state
+109,3.63,2,car,42.1,CROSSING,GREEN
+215,7.16,7,truck,38.6,RED_LIGHT_VIOLATION,RED
+332,11.06,5,bus,29.8,CROSSING,GREEN
+</code></pre></div></div> <hr> <h1 id="-system-architecture">🧩 System Architecture</h1> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────┐
+│ traffic.mp4 │
+└──────┬─────────┘
+│
+┌───────▼────────┐
+│ RT-DETR │
+└───────┬────────┘
+│ detections
+┌───────▼──────────┐
+│ Simple Tracker │
+└───────┬──────────┘
+│
+┌───────▼──────────────┐
+│ Speed Estimator │
+└───────┬──────────────┘
+│
+┌───────▼──────────────────┐
+│ Event Logger (CSV/JSON) │
+└───────┬──────────────────┘
+│
+┌───────▼───────────────────────┐
+│ gpt-4o-mini LLM Report │
+└───────────────────────────────┘
+</code></pre></div></div> <hr> <h1 id="-contributing">🤝 Contributing</h1> <p>Pull requests are welcome. If you find a bug or have an idea, feel free to open an issue.</p> <hr> </body></html>
