@@ -59,9 +59,9 @@ ninja.data = [{
           description: "A portfolio project demonstrating a RAG architecture...",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag_project/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-ai-powered-traffic-analysis-system",
+          title: '🚦 AI-Powered Traffic Analysis System',
+          description: "Real-Time Vehicle Detection • Tracking • Speed Estimation • Red-Light Violation Detection • LLM Traffic Reports",
           section: "Projects",handler: () => {
               window.location.href = "/projects/traffic-analysis-ai/";
             },},{
