@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "AI-Powered Traffic Analysis System"
+title: "🚦 AI-Powered Traffic Analysis System"
 date: 2025-12-7 00:15:00 +0100
 description: Real-Time Vehicle Detection • Tracking • Speed Estimation • Red-Light Violation Detection • LLM Traffic Reports
 
@@ -22,16 +22,9 @@ tags:
 
 github: https://github.com/faridkazimov/traffic-analysis-ai
 
+---
 
 
-# 🚦 AI-Powered Traffic Analysis System
-**Real-Time Vehicle Detection • Tracking • Speed Estimation • Red-Light Violation Detection • LLM Traffic Reports**
-
-<p align="center">
-<img src="https://img.shields.io/badge/Model-RT--DETR-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/LLM-gpt--4o--mini-green?style=for-the-badge">
-<img src="https://img.shields.io/badge/Tracking-Custom%20ID%20Tracker-orange?style=for-the-badge">
-</p>
 
 This project is a **complete end-to-end traffic intelligence system** built using **Computer Vision + Transformers + LLMs**.
 It processes a traffic video and automatically produces:
