@@ -1,3 +1,29 @@
+---
+layout: page
+title: "AI-Powered Traffic Analysis System"
+date: 2025-12-7 00:15:00 +0100
+description: Real-Time Vehicle Detection • Tracking • Speed Estimation • Red-Light Violation Detection • LLM Traffic Reports
+
+# DÜZELTİLMİŞ ALAN:
+categories:
+  - Projects
+  - AI
+  - Portfolio
+
+# DÜZELTİLMİŞ ALAN:
+tags:
+  - Python
+  - LLM
+  - RAG
+  - Vehicle_Detection
+  - Tracking
+  - OpenAI
+
+
+github: https://github.com/faridkazimov/traffic-analysis-ai
+
+
+
 # 🚦 AI-Powered Traffic Analysis System
 **Real-Time Vehicle Detection • Tracking • Speed Estimation • Red-Light Violation Detection • LLM Traffic Reports**
 
