@@ -51,107 +51,21 @@ It processes a traffic video and automatically produces:
 ---
 ## Event Log (CSV Output)
 
-[
-  {
-    "frame": 134,
-    "time_sec": 4.466666666666667,
-    "track_id": 16,
-    "class_name": "car",
-    "speed_kmh": 98.2953737436583,
-    "event_type": "RED_LIGHT_VIOLATION",
-    "light_state": "RED"
-  },
-  {
-    "frame": 157,
-    "time_sec": 5.233333333333333,
-    "track_id": 18,
-    "class_name": "car",
-    "speed_kmh": 52.44030545436825,
-    "event_type": "RED_LIGHT_VIOLATION",
-    "light_state": "RED"
-  },
-  {
-    "frame": 696,
-    "time_sec": 23.2,
-    "track_id": 44,
-    "class_name": "car",
-    "speed_kmh": 54.87640767129409,
-    "event_type": "RED_LIGHT_VIOLATION",
-    "light_state": "RED"
-  },
-  {
-    "frame": 735,
-    "time_sec": 24.5,
-    "track_id": 45,
-    "class_name": "car",
-    "speed_kmh": 100.53241193853034,
-    "event_type": "RED_LIGHT_VIOLATION",
-    "light_state": "RED"
-  },
-  {
-    "frame": 804,
-    "time_sec": 26.8,
-    "track_id": 46,
-    "class_name": "car",
-    "speed_kmh": 62.655231245109306,
-    "event_type": "RED_LIGHT_VIOLATION",
-    "light_state": "RED"
-  },
-  {
-    "frame": 881,
-    "time_sec": 29.366666666666667,
-    "track_id": 50,
-    "class_name": "car",
-    "speed_kmh": 59.433554461744876,
-    "event_type": "CROSSING",
-    "light_state": "GREEN"
-  },
-  {
-    "frame": 935,
-    "time_sec": 31.166666666666668,
-    "track_id": 52,
-    "class_name": "car",
-    "speed_kmh": 67.63182134192573,
-    "event_type": "CROSSING",
-    "light_state": "GREEN"
-  },
-  {
-    "frame": 1049,
-    "time_sec": 34.96666666666667,
-    "track_id": 55,
-    "class_name": "car",
-    "speed_kmh": 53.632758371272466,
-    "event_type": "CROSSING",
-    "light_state": "GREEN"
-  },
-  {
-    "frame": 1073,
-    "time_sec": 35.766666666666666,
-    "track_id": 62,
-    "class_name": "motorcycle",
-    "speed_kmh": 104.68760385069477,
-    "event_type": "CROSSING",
-    "light_state": "GREEN"
-  },
-  {
-    "frame": 1074,
-    "time_sec": 35.8,
-    "track_id": 62,
-    "class_name": "motorcycle",
-    "speed_kmh": 58.54844148224613,
-    "event_type": "CROSSING",
-    "light_state": "GREEN"
-  },
-  {
-    "frame": 1079,
-    "time_sec": 35.96666666666667,
-    "track_id": 59,
-    "class_name": "motorcycle",
-    "speed_kmh": 70.47974080859753,
-    "event_type": "CROSSING",
-    "light_state": "GREEN"
-  }
-]
+```markdown
+| frame        | time_sec       | track_id      | class_name    | speed_kmh    | event_type     | light_state  |
+| :----------- | :------------: | ------------: | ------------: | :----------- | :------------: | ------------:|
+| 134          |    4.466       |       16      |      car      | 98.2953      |RED_LIGHT_VIOLATION|       RED |
+| 157          |    5.2333      |       18      |      car      | 52.4403      |RED_LIGHT_VIOLATION|       RED | 
+| 696          |    23.2        |       44      |      car      | 54.8764      |RED_LIGHT_VIOLATION|       RED |
+| 735          |    24.5        |       45      |      car      | 100.5324     |RED_LIGHT_VIOLATION|       RED |
+| 804          |    26.8        |       46      |      car      | 62.6552      |RED_LIGHT_VIOLATION|       RED | 
+| 881          |    29.3666     |       50      |      car      | 59.4335      |    CROSSING       |     GREEN |
+| 935          |    31.1666     |       52      |      car      | 67.6318      |    CROSSING       |     GREEN |
+| 1049         |    34.9666     |       55      |      car      | 53.6327      |    CROSSING       |     GREEN | 
+| 1073         |    35.766      |       62      |    motorcycle | 104.6876     |    CROSSING       |     GREEN |
+| 1074         |    35.8        |       62      |    motorcycle | 58.5484      |    CROSSING       |     GREEN | 
+| 1079         |    36.9666     |       59      |    motorcycle | 70.4797      |    CROSSING       |     GREEN |
+```
 
 
 ---
