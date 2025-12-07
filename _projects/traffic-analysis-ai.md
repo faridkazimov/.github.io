@@ -40,9 +40,10 @@ It processes a traffic video and automatically produces:
 
 ---
 ## Demo Video
-<video width="800" controles>
-  <source src="assets/video/traffic-analysis-ai.mp4" type="video/mp4">
-</video>
+<div style="text-allign:center">
+  <video width="800" controles>
+    <source src="/assets/video/traffic-analysis-ai.mp4" type="video/mp4">
+  </video>
 
 
 ---
