@@ -96,7 +96,6 @@ A total of 5 red-light violations were recorded, representing a significant 45% 
 
 3. **Traffic Signal Improvements:** Consider upgrading traffic signal visibility and timing, as well as installing additional signage to alert drivers of upcoming signals. Enhanced visibility may help reduce violations and improve overall traffic safety.
 
-By addressing these issues, we can work towards creating a safer driving environment for all road users.
 ---
 
 ---
