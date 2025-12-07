@@ -51,21 +51,23 @@ It processes a traffic video and automatically produces:
 ---
 ## Event Log (CSV Output)
 
-```markdown
-| frame        | time_sec       | track_id      | class_name    | speed_kmh    | event_type     | light_state  |
-| :----------- | :------------: | ------------: | ------------: | :----------- | :------------: | ------------:|
-| 134          |    4.466       |       16      |      car      | 98.2953      |RED_LIGHT_VIOLATION|       RED |
-| 157          |    5.2333      |       18      |      car      | 52.4403      |RED_LIGHT_VIOLATION|       RED | 
-| 696          |    23.2        |       44      |      car      | 54.8764      |RED_LIGHT_VIOLATION|       RED |
-| 735          |    24.5        |       45      |      car      | 100.5324     |RED_LIGHT_VIOLATION|       RED |
-| 804          |    26.8        |       46      |      car      | 62.6552      |RED_LIGHT_VIOLATION|       RED | 
-| 881          |    29.3666     |       50      |      car      | 59.4335      |    CROSSING       |     GREEN |
-| 935          |    31.1666     |       52      |      car      | 67.6318      |    CROSSING       |     GREEN |
-| 1049         |    34.9666     |       55      |      car      | 53.6327      |    CROSSING       |     GREEN | 
-| 1073         |    35.766      |       62      |    motorcycle | 104.6876     |    CROSSING       |     GREEN |
-| 1074         |    35.8        |       62      |    motorcycle | 58.5484      |    CROSSING       |     GREEN | 
-| 1079         |    36.9666     |       59      |    motorcycle | 70.4797      |    CROSSING       |     GREEN |
-```
+
+
+
+| frame        | time_sec       | track_id      | class_name    | speed_kmh    | event_type        | light_state  |
+| :----------- | :------------: | ------------: | ------------: | :----------- | :------------:    | ------------:|
+| 134          |    4.466       |       16      |      car      | 98.2953      |RED_LIGHT_VIOLATION|       RED    |
+| 157          |    5.2333      |       18      |      car      | 52.4403      |RED_LIGHT_VIOLATION|       RED    | 
+| 696          |    23.2        |       44      |      car      | 54.8764      |RED_LIGHT_VIOLATION|       RED    |
+| 735          |    24.5        |       45      |      car      | 100.5324     |RED_LIGHT_VIOLATION|       RED    |
+| 804          |    26.8        |       46      |      car      | 62.6552      |RED_LIGHT_VIOLATION|       RED    | 
+| 881          |    29.3666     |       50      |      car      | 59.4335      |    CROSSING       |     GREEN    |
+| 935          |    31.1666     |       52      |      car      | 67.6318      |    CROSSING       |     GREEN    |
+| 1049         |    34.9666     |       55      |      car      | 53.6327      |    CROSSING       |     GREEN    | 
+| 1073         |    35.766      |       62      |    motorcycle | 104.6876     |    CROSSING       |     GREEN    |
+| 1074         |    35.8        |       62      |    motorcycle | 58.5484      |    CROSSING       |     GREEN    | 
+| 1079         |    36.9666     |       59      |    motorcycle | 70.4797      |    CROSSING       |     GREEN    |
+
 
 
 ---
