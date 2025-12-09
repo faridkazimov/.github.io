@@ -79,7 +79,7 @@
     - title: LLM & GENAI
       items:
         - Prompt Engineering • Function Calling • RAG • LangChain • LangGraph • AI Agents •  Embeddings • Hallucination Reduction • Safety Filters • Azure/OpenAI • HF Transformers • NLP (classification, summarization, QnA)
-    - title: AZURE AI (AI-102 CAPABILITIES
+    - title: AZURE AI (AI-102 CAPABILITIES)
       items:
         - Cognitive Search • AI Language • Document Intelligence (OCR) • Speech & Vision Services • Content Safety • Prompt Flow • Azure ML (deployment)
     - title: MACHINE LEARNING AND DEEP LEARNING
@@ -97,7 +97,7 @@
     - title: PROGRAMMING & TOOLS
       items:
         - Python • C++ • FastAPI • NumPy • Pandas • Scikit-Learn • PyTorch • TensorFlow • Keras • Git • Colab • VSCode
-- title: Other Interests   
+ 
 - title: Other Interests
   type: list
   contents:
