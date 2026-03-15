@@ -100,7 +100,7 @@ Microsoft Certified: Azure AI Engineer Associate
 <div class="cert-row">
 
 <a href="#cert2">
-<img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.png" class="cert-img">
+<img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.PNG" class="cert-img">
 </a>
 
 <div class="cert-info">
@@ -121,7 +121,7 @@ IBM | Generative AI Engineering with LLMs Specialization
 
 <div id="cert2" class="modal">
 <a href="#">
-<img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.png">
+<img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.PNG">
 </a>
 </div>
 
