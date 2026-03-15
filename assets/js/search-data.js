@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-certifications",
+          title: "certifications",
+          description: "Professional certifications and completed programs.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/certifications/";
+          },
         },{id: "nav-repositories",
           title: "repositories",
           description: "",
@@ -43,13 +50,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
-          },
-        },{id: "nav-certifications",
-          title: "certifications",
-          description: "Professional certifications and completed programs.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/certifications/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
