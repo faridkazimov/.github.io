@@ -91,7 +91,7 @@ AWS Certified Cloud Practitioner
 
 <div id="cert1" class="modal">
 <a href="#">
-<img src="/assets/img/certifications/aws-ccp.jpg">
+<img src="/assets/img/certifications/azure.png">
 </a>
 </div>
 
