@@ -70,7 +70,7 @@ display:block;
 <div class="cert-row">
 
 <a href="#cert1">
-<img src="/assets/img/certifications/aws-ccp.jpg" class="cert-img">
+<img src="/assets/img/certifications/azure.png" class="cert-img">
 </a>
 
 <div class="cert-info">
