@@ -91,9 +91,6 @@
     - title: MLOps & Deployment
       items:
         - Docker • CI/CD • Scalable Inference • Monitoring • Azure Deployment
-    - title: MLOPS & DEPLOYMENT
-      items:
-        - Docker • GitHubActions • CI/CD • Model versioning • Batch/real-time inference • Azure deployment • Monitoring & Logging
     - title: Programming & Frameworks
       items:
         - Python • C++ • PyTorch • TensorFlow • FastAPI • NumPy • Pandas • Scikit-learn • Git
