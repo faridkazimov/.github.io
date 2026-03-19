@@ -4,7 +4,7 @@
     - name: Full Name
       value: Farid Kazimov
     - name: Title
-      value: Master Engineer | AI Engineer | Computer Vision | LLM & GenAi | ML
+      value: Master Engineer | AI Engineer | Computer Vision | Generative AI (LLMs & NLP)
     - name: Email
       value: kazimov.ferid.99@gmail.com
     - name: Languages
@@ -76,28 +76,54 @@
 - title: Skills
   type: nested_list
   contents:
-    - title: LLM & GENAI
+    - title: Generative AI (LLMs & NLP)
       items:
-        - Prompt Engineering • Function Calling • RAG • LangChain • LangGraph • AI Agents •  Embeddings • Hallucination Reduction • Safety Filters • Azure/OpenAI • HF Transformers • NLP (classification, summarization, QnA)
-    - title: AZURE AI (AI-102 CAPABILITIES)
+        - RAG • AI Agents • Prompt Engineering • Function Calling • LangChain • LangGraph • Embeddings • Semantic Search • Hallucination Reduction • Safety & Guardrails • Hugging Face Transformers • Azure OpenAI • NLP(Classification • NER • Summarization • Q&A)
+    - title: Computer Vision
       items:
-        - Cognitive Search • AI Language • Document Intelligence (OCR) • Speech & Vision Services • Content Safety • Prompt Flow • Azure ML (deployment)
-    - title: MACHINE LEARNING AND DEEP LEARNING
+        - YOLO (Detection) • Object Detection • Segmentation • Tracking • Transfer Learning • Occlusion Handling • Dense Scene Optimization • OpenCV • Heatmaps / Density Estimation
+    - title: Information Retrieval & Vector Search
       items:
-        - Neural Networks • CNNs • Transformers • Data preprocessing • Regularization(Dropout, BatchNorm) • Evaluation (F1, mAP, RMSE) • Explainability (SHAP, LIME) • Hyperparametertuning     
-    - title: COMPUTER VISION
+        - FAISS • Semantic & Hybrid Search • Similarity Search • Query Expansion • Embedding Optimization   
+    - title: Cloud & Azure AI
       items:
-        - YOLO • OpenCV • Heatmaps/Density Maps • Object Detection • Segmentation • Transfer Learning • Cross-species generalization • Tracking & Occlusion Handling 
-    - title: INFORMATION RETRIEVAL AND VECTOR SEARCH
+        - Azure OpenAI • Cognitive Search • Document Intelligence (OCR) • Speech & Vision Services • Prompt Flow • Azure ML (Deployment)
+    - title: MLOps & Deployment
       items:
-        - FAISS • Semantic/Hybrid Search • Similarity Search • QueryExpansion • Embedding Optimization 
+        - Docker • CI/CD • Scalable Inference • Monitoring • Azure Deployment
     - title: MLOPS & DEPLOYMENT
       items:
         - Docker • GitHubActions • CI/CD • Model versioning • Batch/real-time inference • Azure deployment • Monitoring & Logging
-    - title: PROGRAMMING & TOOLS
+    - title: Programming & Frameworks
       items:
-        - Python • C++ • FastAPI • NumPy • Pandas • Scikit-Learn • PyTorch • TensorFlow • Keras • Git • Colab • VSCode
- 
+        - Python • C++ • PyTorch • TensorFlow • FastAPI • NumPy • Pandas • Scikit-learn • Git
+
+- title: Certifications
+  type: time_table
+  contents:
+    - title: <a href="https://learn.microsoft.com/en-us/users/faridkazimov-6859/credentials/d82ee2db168317fd?ref=https%3A%2F%2Ffaridkazimov.com%2F">Microsoft Certified: Azure AI Engineer Associate</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/specialization/I1U8I4E1PKQD?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n">IBM | Generative AI Engineering with LLMs Specialization</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/0JF3E8TVAOWF?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Project: Generative AI Applications with RAG and LangChain</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/XJ3B8PK8G5I4?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Fundamentals of AI Agents Using RAG and LangChain</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/CVKSHZF7UPON?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Generative AI Advance Fine-Tuning for LLMs</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/ITLKIK49Y2EL?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Generative AI Engineering and Fine-Tuning Transformers</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/58F6EKRCYH3L?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Generative AI Language Modeling with Transformers</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/SEJU0WSGRU1X?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Gen AI Foundational Models for NLP & Language Understanding</a>
+      year: 2026
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/34TAQIH59U6U?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">IBM | Generative AI and LLMs: Architecture and Data Preparation</a>
+      year: 2026
+    - title: <a href="https://www.udemy.com/certificate/UC-6474f986-dc5a-4a51-a659-fa9e9b4fdf4f/">Udemy | AI-102: Microsoft Certified Azure AI Engineer Associate</a>
+      year: 2026
+      
+  
+
 - title: Other Interests
   type: list
   contents:
