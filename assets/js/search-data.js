@@ -51,11 +51,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-generative-ai-overview",
+        },{id: "post-what-is-generative-ai-types-and-architectures",
         
-          title: "Generative Ai Overview",
+          title: "What is Generative AI? Types and Architectures",
         
-        description: "",
+        description: "An overview of Generative AI, including text, image, and audio generation, and the architectures behind them.",
         section: "Posts",
         handler: () => {
           
