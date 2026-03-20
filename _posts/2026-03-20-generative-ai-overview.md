@@ -33,9 +33,12 @@ Before processing, text is converted into numerical representations called **emb
 
 ### Recurrent Neural Networks (RNN)
 
-![RNN Diagram](https://upload.wikimedia.org/wikipedia/commons/b/b5/Recurrent_neural_network_unfold.svg)
-
-*Source: Wikimedia Commons*
+<div style="text-align: center;">
+  <img src="/assets/img/blog/rnn.png" alt="RNN Diagram" width="500">
+</div>
+<p style="text-align: center; font-size: 0.9em;">
+  Source: Wikimedia Commons
+</p>
 
 One of the earliest architectures used for sequence modeling is the Recurrent Neural Network (RNN). RNNs are designed to process sequential data by incorporating information from previous steps. They achieve this by feeding their output back into the network as input for the next step, effectively creating a form of memory.
 
@@ -57,9 +60,6 @@ In contrast, feedforward neural networks process data in a single direction and 
 
 ### Transformers
 
-![Transformer Attention](https://upload.wikimedia.org/wikipedia/commons/8/8f/The_transformer_model_architecture.png)
-
-*Source: Vaswani et al., 2017*
 
 The architecture that replaced RNNs in most modern applications is the Transformer. Unlike RNNs, transformers process the entire input sequence simultaneously rather than step by step.
 
