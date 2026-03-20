@@ -34,7 +34,7 @@ Before processing, text is converted into numerical representations called **emb
 ### Recurrent Neural Networks (RNN)
 
 <div style="text-align: center;">
-  <img src="/assets/img/blog/rnn.png" alt="RNN Diagram" width="500">
+  <img src="/assets/img/blog/rnn.webp" width="500">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
   Source: Wikimedia Commons
