@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-what-is-generative-ai-types-and-architectures",
+        },{id: "post-how-do-llms-work-understanding-next-token-prediction",
+        
+          title: "How Do LLMs Work? Understanding Next Token Prediction",
+        
+        description: "A simple but deep explanation of how Large Language Models work using next-token prediction and probability.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-llms-work/";
+          
+        },
+      },{id: "post-what-is-generative-ai-types-and-architectures",
         
           title: "What is Generative AI? Types and Architectures",
         
