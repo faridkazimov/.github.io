@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-how-do-llms-work-understanding-next-token-prediction",
+        },{id: "post-transformer-architecture-explained-attention-is-all-you-need",
+        
+          title: "Transformer Architecture Explained: Attention is All You Need",
+        
+        description: "A deep dive into Transformer architecture, including encoder-decoder structure, attention mechanism, positional encoding, and multi-head attention.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/transformer-architecture-explained/";
+          
+        },
+      },{id: "post-how-do-llms-work-understanding-next-token-prediction",
         
           title: "How Do LLMs Work? Understanding Next Token Prediction",
         
