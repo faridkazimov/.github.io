@@ -32,7 +32,7 @@ Transformers solved these problems by removing sequential processing and introdu
 ## 🏗️ High-Level Architecture
 
 <div style="text-align: center;">
-  <img src="/assets/img/blog/transformer.png" alt="Transformer Architecture" width="700">
+  <img src="/assets/img/blog/transformer.png" alt="Transformer Architecture" width="500">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
   Source: Vaswani et al., 2017
