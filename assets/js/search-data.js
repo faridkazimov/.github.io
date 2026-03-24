@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-transformer-architecture-explained-attention-is-all-you-need",
+        },{id: "post-a-deep-dive-into-attention-self-attention-multi-head-attention-and-positional-encoding",
+        
+          title: "A Deep Dive into Attention: Self-Attention, Multi-Head Attention and Positional Encoding",
+        
+        description: "A comprehensive guide to attention mechanisms in Transformers, including intuition, QKV, self-attention, multi-head attention, and positional encoding.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/attention-deep-dive/";
+          
+        },
+      },{id: "post-transformer-architecture-explained-attention-is-all-you-need",
         
           title: "Transformer Architecture Explained: Attention is All You Need",
         
