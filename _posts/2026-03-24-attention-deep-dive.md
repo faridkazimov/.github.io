@@ -125,6 +125,7 @@ Transformers process all tokens simultaneously, so they need positional informat
   Source: Erdem, 2021
 </p>
 
+
 ---
 
 ### 📐 Sinusoidal Encoding
