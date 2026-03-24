@@ -119,7 +119,7 @@ Transformers process all tokens simultaneously, so they need positional informat
 ---
 
 <div style="text-align: center;">
-  <img src="/assets/img/blog/positionalencoding.html" alt="Positional Encoding" style="max-width: 100%; width: 500px;">
+  <img src="/assets/img/blog/positionalencoding.PNG" alt="Positional Encoding" style="max-width: 100%; width: 500px;">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
   Source: Erdem, 2021
