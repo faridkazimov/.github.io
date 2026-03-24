@@ -35,7 +35,7 @@ Instead of treating every word equally, the model assigns different importance s
   <img src="/assets/img/blog/head-view.gif" alt="Attention mechanism visualization" style="max-width: 100%; width: 500px;">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
-  Words attend to relevant parts of the sentence
+  Source: Vig, J. (BertViz)
 </p>
 
 ---
@@ -61,7 +61,7 @@ Attention is computed using three vectors:
   <img src="/assets/img/blog/qkv.ppm" alt="QKV Attention Diagram" style="max-width: 100%; width: 550px;">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
-  Query, Key, Value mechanism
+  Source: ResearchGate (QKV Attention Diagram)
 </p>
 
 ---
@@ -80,16 +80,6 @@ This produces a context-aware representation.
 
 Self-attention allows each word to attend to all other words in the same sentence.
 
----
-
-<div style="text-align: center;">
-  <img src="/assets/img/blog/self_attention.png" alt="Self Attention Diagram" style="max-width: 100%; width: 550px;">
-</div>
-<p style="text-align: center; font-size: 0.9em;">
-  Each token attends to all other tokens
-</p>
-
----
 
 This enables:
 - long-range dependency modeling  
@@ -108,7 +98,7 @@ Instead of a single attention mechanism, Transformers use multiple attention hea
   <img src="/assets/img/blog/multiheadattention.webp" alt="Multi Head Attention Diagram" style="max-width: 100%; width: 650px;">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
-  Multiple attention heads capture different relationships
+  Source: AIML.com
 </p>
 
 ---
@@ -132,7 +122,7 @@ Transformers process all tokens simultaneously, so they need positional informat
   <img src="/assets/img/blog/positionalencoding.html" alt="Positional Encoding" style="max-width: 100%; width: 500px;">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
-  Positional encoding adds order information
+  Source: Erdem, 2021
 </p>
 
 ---
