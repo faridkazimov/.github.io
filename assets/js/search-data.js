@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-deep-dive-into-attention-self-attention-multi-head-attention-and-positional-encoding",
+        },{id: "post-encoder-vs-decoder-understanding-bert-gpt-and-modern-llm-architectures",
+        
+          title: "Encoder vs Decoder: Understanding BERT, GPT and Modern LLM Architectures",
+        
+        description: "A deep dive into encoder-only, decoder-only, and encoder-decoder architectures, and how models like BERT, GPT, and BART differ.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/encoder-vs-decoder-bert-gpt/";
+          
+        },
+      },{id: "post-a-deep-dive-into-attention-self-attention-multi-head-attention-and-positional-encoding",
         
           title: "A Deep Dive into Attention: Self-Attention, Multi-Head Attention and Positional Encoding",
         
