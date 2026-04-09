@@ -2,14 +2,13 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 {% if site.data.repositories.github_users %}
 
-## GitHub Profile
+## GitHub user
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% for user in site.data.repositories.github_users %}
@@ -17,26 +16,25 @@ nav_order: 4
   {% endfor %}
 </div>
 
+---
+
 {% if site.repo_trophies.enabled %}
-<hr>
-
-## GitHub Trophies
-
 {% for user in site.data.repositories.github_users %}
-  {% if site.data.repositories.github_users.size > 1 %}
-    <h4>{{ user }}</h4>
+{% if site.data.repositories.github_users.size > 1 %}
+
+  <h4>{{ user }}</h4>
   {% endif %}
   <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-    {% include repository/repo_trophies.liquid username=user %}
+  {% include repository/repo_trophies.liquid username=user %}
   </div>
-{% endfor %}
 
+---
+
+{% endfor %}
 {% endif %}
 {% endif %}
 
 {% if site.data.repositories.github_repos %}
-
-<hr>
 
 ## GitHub Repositories
 
@@ -45,5 +43,5 @@ nav_order: 4
     {% include repository/repo.liquid repository=repo %}
   {% endfor %}
 </div>
-
+{% endif %}
 {% endif %}
