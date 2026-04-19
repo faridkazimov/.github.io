@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-fine-tuning-large-language-models-from-full-training-to-parameter-efficient-methods",
+        },{id: "post-retrieval-augmented-generation-rag-building-knowledge-aware-llm-systems",
+        
+          title: "Retrieval-Augmented Generation (RAG): Building Knowledge-Aware LLM Systems",
+        
+        description: "An advanced deep dive into Retrieval-Augmented Generation (RAG), covering architecture, embeddings, vector databases, and real-world trade-offs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/fine-tuning-llm/";
+          
+        },
+      },{id: "post-fine-tuning-large-language-models-from-full-training-to-parameter-efficient-methods",
         
           title: "Fine-Tuning Large Language Models: From Full Training to Parameter-Efficient Methods",
         
