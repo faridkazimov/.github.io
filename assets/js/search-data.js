@@ -111,7 +111,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-autonomous-research-agent-langgraph-ai",
+            },},{id: "news-i-presented-our-paper-comparative-analysis-of-seven-yolo-architectures-applied-for-the-detection-of-objects-of-different-scale-at-different-scene-densities-at-the-18th-asian-conference-on-intelligent-information-and-database-systems-aciids-2026-in-kaohsiung-taiwan-this-project-was-conducted-together-with-professor-kazimierz-choroś-conference-poster",
+          title: 'I presented our paper, “Comparative Analysis of Seven YOLO Architectures Applied for the...',
+          description: "",
+          section: "News",},{id: "projects-autonomous-research-agent-langgraph-ai",
           title: '🧠 Autonomous Research Agent (LangGraph AI)',
           description: "An advanced AI agent built with LangGraph (LangChain 1.0+) that can autonomously reason, plan, execute tools, and synthesize complex, real-time answers.",
           section: "Projects",handler: () => {
