@@ -35,10 +35,10 @@ Instead of relying solely on internal knowledge, the model retrieves relevant co
 ## 🏗️ High-Level Architecture
 
 <div style="text-align: center;">
-  <img src="/assets/img/blog/rag_pipeline.png" style="max-width: 100%; width: 700px;">
+  <img src="/assets/img/blog/rag.jpg" style="max-width: 100%; width: 700px;">
 </div>
 <p style="text-align: center; font-size: 0.9em;">
-  Source: RAG Pipeline Overview
+  Source: Loh, S., "Making Sense of Vector Search and Embeddings", 2024
 </p>
 
 ---
