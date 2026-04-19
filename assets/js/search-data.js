@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-encoder-vs-decoder-understanding-bert-gpt-and-modern-llm-architectures",
+        },{id: "post-fine-tuning-large-language-models-from-full-training-to-parameter-efficient-methods",
+        
+          title: "Fine-Tuning Large Language Models: From Full Training to Parameter-Efficient Methods",
+        
+        description: "An advanced deep dive into fine-tuning LLMs, covering full fine-tuning, PEFT methods like LoRA, and real-world trade-offs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/fine-tuning-llm/";
+          
+        },
+      },{id: "post-encoder-vs-decoder-understanding-bert-gpt-and-modern-llm-architectures",
         
           title: "Encoder vs Decoder: Understanding BERT, GPT and Modern LLM Architectures",
         
