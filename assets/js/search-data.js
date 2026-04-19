@@ -59,7 +59,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/fine-tuning-llm/";
+            window.location.href = "/blog/2026/rag-llm-systems/";
           
         },
       },{id: "post-fine-tuning-large-language-models-from-full-training-to-parameter-efficient-methods",
