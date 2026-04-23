@@ -21,6 +21,7 @@ border:2px solid #e8eefc;
 border-radius:14px;
 background:#fafcff;
 box-shadow:0 4px 14px rgba(0,0,0,0.08);
+color:#1f2937 !important;
 }
 
 .cert-row.featured .cert-img{
@@ -31,11 +32,21 @@ width:300px;
 font-size:24px;
 font-weight:700;
 margin-bottom:12px;
+color:#111827 !important;
 }
 
 .cert-row.featured .cert-info p{
 font-size:16px;
 margin:6px 0;
+color:#374151 !important;
+}
+
+.cert-row.featured .cert-info strong{
+color:#111827 !important;
+}
+
+.cert-row.featured .cert-info a{
+color:#0b5ed7 !important;
 }
 
 .cert-img{
