@@ -7,353 +7,436 @@ nav: true
 nav_order: 4
 ---
 
-
 <style>
+.section-title{
+  font-size:28px;
+  font-weight:700;
+  margin:35px 0 20px;
+}
+
+.section-subtitle{
+  font-size:15px;
+  color:#666;
+  margin-top:-10px;
+  margin-bottom:25px;
+}
+
+.featured-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:24px;
+  margin-bottom:50px;
+}
+
+.featured-card{
+  border:1px solid #e5e5e5;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  background:#fff;
+  transition:transform .2s, box-shadow .2s;
+}
+
+.featured-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+}
+
+.featured-card img{
+  width:100%;
+  max-height:220px;
+  object-fit:contain;
+  border-radius:10px;
+  cursor:pointer;
+  margin-bottom:14px;
+}
+
+.featured-badge{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  color:#0b5ed7;
+  background:#eaf2ff;
+  padding:6px 10px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+
+.featured-title{
+  font-size:21px;
+  font-weight:700;
+  margin-bottom:10px;
+  line-height:1.35;
+}
+
+.featured-card p{
+  margin:6px 0;
+}
+
 .cert-row{
-display:flex;
-align-items:flex-start;
-gap:25px;
-margin-bottom:40px;
+  display:flex;
+  align-items:flex-start;
+  gap:25px;
+  margin-bottom:40px;
 }
 
 .cert-img{
-width:260px;
-cursor:pointer;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.15);
-transition:transform .2s;
+  width:220px;
+  cursor:pointer;
+  border-radius:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.15);
+  transition:transform .2s;
 }
 
 .cert-img:hover{
-transform:scale(1.03);
+  transform:scale(1.03);
 }
 
 .cert-info{
-flex:1;
+  flex:1;
 }
 
 .cert-title{
-font-size:20px;
-font-weight:600;
-margin-bottom:10px;
+  font-size:19px;
+  font-weight:600;
+  margin-bottom:10px;
 }
 
 .cert-info p{
-margin:4px 0;
+  margin:4px 0;
 }
 
-.modal {
-display:none;
-position:fixed;
-z-index:999;
-padding-top:60px;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background-color:rgba(0,0,0,0.8);
+.cert-note{
+  color:#666;
+  font-size:14px;
+  margin-top:6px;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  padding-top:60px;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.8);
 }
 
 .modal img{
-display:block;
-margin:auto;
-max-width:80%;
+  display:block;
+  margin:auto;
+  max-width:80%;
+  max-height:85vh;
 }
 
 .modal:target{
-display:block;
+  display:block;
 }
 </style>
 
----
+<h1 class="section-title">Featured Certifications</h1>
+<p class="section-subtitle">Main specialization and professional certifications.</p>
 
-<div class="cert-row">
+<div class="featured-grid">
 
-<a href="#cert1">
-<img src="/assets/img/certifications/azure.png" class="cert-img">
-</a>
+  <div class="featured-card">
+    <a href="#cert1">
+      <img src="/assets/img/certifications/azure.png" alt="Azure AI Engineer Associate Certificate">
+    </a>
+    <div class="featured-badge">Professional Certification</div>
+    <div class="featured-title">Microsoft Certified: Azure AI Engineer Associate</div>
+    <p><strong>Date:</strong> February 4, 2026 - February 4, 2027</p>
+    <p><strong>Credential ID:</strong> D82EE2DB168317FD</p>
+    <p><strong>Credential Link:</strong> <a href="https://learn.microsoft.com/api/credentials/share/en-us/FaridKazimov-6859/D82EE2DB168317FD?sharingId=C4AF49C66A0BC766" target="_blank">View Credential</a></p>
+  </div>
 
-<div class="cert-info">
+  <div class="featured-card">
+    <a href="#cert2">
+      <img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.PNG" alt="IBM Generative AI Engineering with LLMs Specialization">
+    </a>
+    <div class="featured-badge">Specialization</div>
+    <div class="featured-title">IBM | Generative AI Engineering with LLMs Specialization</div>
+    <p><strong>Date:</strong> Mar 14, 2026</p>
+    <p><strong>Credential ID:</strong> I1U8I4E1PKQD</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/d4935ba2750c640da2dcf46825f49b13" target="_blank">View Credential</a></p>
+  </div>
 
-<div class="cert-title">
-Microsoft Certified: Azure AI Engineer Associate
-</div>
+  <div class="featured-card">
+    <a href="#cert3">
+      <img src="/assets/img/certifications/TensorFlow Specialization.PNG" alt="TensorFlow Advanced Techniques Specialization">
+    </a>
+    <div class="featured-badge">Specialization</div>
+    <div class="featured-title">DeepLearning.AI | TensorFlow: Advanced Techniques Specialization</div>
+    <p><strong>Date:</strong> Apr 23, 2026</p>
+    <p><strong>Credential ID:</strong> G0G74WQ1ABDS</p>
+    <p><strong>Credential Link:</strong> <a href="https://www.coursera.org/account/accomplishments/specialization/G0G74WQ1ABDS" target="_blank">View Credential</a></p>
+  </div>
 
-<p><strong>Date:</strong>February 4, 2026 - February 4, 2027</p>
-
-<p><strong>Credential ID:</strong>D82EE2DB168317FD</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://learn.microsoft.com/api/credentials/share/en-us/FaridKazimov-6859/D82EE2DB168317FD?sharingId=C4AF49C66A0BC766" target="_blank">View Credential</a></p>
-
-</div>
 </div>
 
 <div id="cert1" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/azure.png">
-</a>
-</div>
-
----
-
-<div class="cert-row">
-
-<a href="#cert2">
-<img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Generative AI Engineering with LLMs Specialization
-</div>
-
-<p><strong>Date:</strong>Mar 14, 2026</p>
-
-<p><strong>Credential ID:</strong>I1U8I4E1PKQD</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/d4935ba2750c640da2dcf46825f49b13" target="_blank">View Credential</a></p>
-
-</div>
+  <a href="#">
+    <img src="/assets/img/certifications/azure.png" alt="Azure AI Engineer Associate Certificate">
+  </a>
 </div>
 
 <div id="cert2" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.PNG">
-</a>
-</div>
-
----
-<div class="cert-row">
-
-<a href="#cert3">
-<img src="/assets/img/certifications/Project.png" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Project: Generative AI Applications with RAG and LangChain
-</div>
-
-<p><strong>Date:</strong>March 14, 2026</p>
-
-<p><strong>Credential ID:</strong>0JF3E8TVAOWF</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/c765d644fa9b771da7a89c37b12975b1" target="_blank">View Credential</a></p>
-
-</div>
+  <a href="#">
+    <img src="/assets/img/certifications/Generative AI Engineering with LLMs Specialization.PNG" alt="IBM Generative AI Engineering with LLMs Specialization">
+  </a>
 </div>
 
 <div id="cert3" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Project.png">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/TensorFlow Specialization.PNG" alt="TensorFlow Advanced Techniques Specialization">
+  </a>
 </div>
 
----
+<h2 class="section-title">Included Course Certificates</h2>
+<p class="section-subtitle">Individual courses completed as part of the specialization programs above.</p>
+
 <div class="cert-row">
+  <a href="#cert4">
+    <img src="/assets/img/certifications/Generative Deep Learning with TensorFlow.PNG" class="cert-img" alt="Generative Deep Learning with TensorFlow">
+  </a>
 
-<a href="#cert4">
-<img src="/assets/img/certifications/Fundamentals of AI Agents Using RAG and LangChain.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Fundamentals of AI Agents Using RAG and LangChain
-</div>
-
-<p><strong>Date:</strong>March 8, 2026</p>
-
-<p><strong>Credential ID:</strong>XJ3B8PK8G5I4</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/8b753650061c2c08b9b1080a665129ee" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">DeepLearning.AI | Generative Deep Learning with TensorFlow</div>
+    <p><strong>Date:</strong> Apr 23, 2026</p>
+    <p><strong>Credential ID:</strong> 4T4REIZK3FVT</p>
+    <p><strong>Credential Link:</strong> <a href="https://www.coursera.org/account/accomplishments/records/4T4REIZK3FVT" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the DeepLearning.AI TensorFlow: Advanced Techniques Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert4" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Fundamentals of AI Agents Using RAG and LangChain.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Generative Deep Learning with TensorFlow.PNG" alt="Generative Deep Learning with TensorFlow">
+  </a>
 </div>
 
----
 <div class="cert-row">
+  <a href="#cert5">
+    <img src="/assets/img/certifications/Advanced Computer Vision with TensorFlow.PNG" class="cert-img" alt="Advanced Computer Vision with TensorFlow">
+  </a>
 
-<a href="#cert5">
-<img src="/assets/img/certifications/Generative AI Advance Fine-Tuning for LLMs.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Generative AI Advance Fine-Tuning for LLMs
-</div>
-
-<p><strong>Date:</strong>March 7, 2026</p>
-
-<p><strong>Credential ID:</strong>CVKSHZF7UPON</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/d707149b1753c2f913f7104cb3281ea0" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">DeepLearning.AI | Advanced Computer Vision with TensorFlow</div>
+    <p><strong>Date:</strong> Apr 10, 2026</p>
+    <p><strong>Credential ID:</strong> 41OIZF8VXMNZ</p>
+    <p><strong>Credential Link:</strong> <a href="https://www.coursera.org/account/accomplishments/records/41OIZF8VXMNZ" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the DeepLearning.AI TensorFlow: Advanced Techniques Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert5" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Generative AI Advance Fine-Tuning for LLMs.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Advanced Computer Vision with TensorFlow.PNG" alt="Advanced Computer Vision with TensorFlow">
+  </a>
 </div>
 
----
 <div class="cert-row">
+  <a href="#cert6">
+    <img src="/assets/img/certifications/Custom and Distributed Training with TensorFlow.PNG" class="cert-img" alt="Custom and Distributed Training with TensorFlow">
+  </a>
 
-<a href="#cert6">
-<img src="/assets/img/certifications/Generative AI Engineering and Fine-Tuning Transformers.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Generative AI Engineering and Fine-Tuning Transformers
-</div>
-
-<p><strong>Date:</strong>February 28, 2026</p>
-
-<p><strong>Credential ID:</strong>ITLKIK49Y2EL</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/4aa31f8da6de6cf79baf6cec582f420b" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">DeepLearning.AI | Custom and Distributed Training with TensorFlow</div>
+    <p><strong>Date:</strong> Apr 17, 2026</p>
+    <p><strong>Credential ID:</strong> 68MXMW1SRKIK</p>
+    <p><strong>Credential Link:</strong> <a href="https://www.coursera.org/account/accomplishments/records/68MXMW1SRKIK" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the DeepLearning.AI TensorFlow: Advanced Techniques Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert6" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Generative AI Engineering and Fine-Tuning Transformers.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Custom and Distributed Training with TensorFlow.PNG" alt="Custom and Distributed Training with TensorFlow">
+  </a>
 </div>
 
----
 <div class="cert-row">
+  <a href="#cert7">
+    <img src="/assets/img/certifications/Custom Models, Layers, and Loss Functions with TensorFlow.PNG" class="cert-img" alt="Custom Models, Layers, and Loss Functions with TensorFlow">
+  </a>
 
-<a href="#cert7">
-<img src="/assets/img/certifications/Generative AI Language Modeling with Transformers.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Generative AI Language Modeling with Transformers
-</div>
-
-<p><strong>Date:</strong>February 25, 2026</p>
-
-<p><strong>Credential ID:</strong>58F6EKRCYH3L</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/8c68c17f6058698553eddec17d31b45a" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">DeepLearning.AI | Custom Models, Layers, and Loss Functions with TensorFlow</div>
+    <p><strong>Date:</strong> Apr 15, 2026</p>
+    <p><strong>Credential ID:</strong> OVB4UMB917DC</p>
+    <p><strong>Credential Link:</strong> <a href="https://www.coursera.org/account/accomplishments/records/OVB4UMB917DC" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the DeepLearning.AI TensorFlow: Advanced Techniques Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert7" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Generative AI Language Modeling with Transformers.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Custom Models, Layers, and Loss Functions with TensorFlow.PNG" alt="Custom Models, Layers, and Loss Functions with TensorFlow">
+  </a>
 </div>
 
----
 <div class="cert-row">
+  <a href="#cert8">
+    <img src="/assets/img/certifications/Project.png" class="cert-img" alt="Project Generative AI Applications with RAG and LangChain">
+  </a>
 
-<a href="#cert8">
-<img src="/assets/img/certifications/Gen AI Foundational Models for NLP, Language Understanding.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Gen AI Foundational Models for NLP & Language Understanding
-</div>
-
-<p><strong>Date:</strong>February 11, 2026</p>
-
-<p><strong>Credential ID:</strong>SEJU0WSGRU1X</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/a97b3859cec9d8e19cc6fa672865229e" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">IBM | Project: Generative AI Applications with RAG and LangChain</div>
+    <p><strong>Date:</strong> March 14, 2026</p>
+    <p><strong>Credential ID:</strong> 0JF3E8TVAOWF</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/c765d644fa9b771da7a89c37b12975b1" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert8" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Gen AI Foundational Models for NLP, Language Understanding.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Project.png" alt="Project Generative AI Applications with RAG and LangChain">
+  </a>
 </div>
 
----
 <div class="cert-row">
+  <a href="#cert9">
+    <img src="/assets/img/certifications/Fundamentals of AI Agents Using RAG and LangChain.PNG" class="cert-img" alt="Fundamentals of AI Agents Using RAG and LangChain">
+  </a>
 
-<a href="#cert9">
-<img src="/assets/img/certifications/Generative AI and LLMs.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-IBM | Generative AI and LLMs: Architecture and Data Preparation
-</div>
-
-<p><strong>Date:</strong>February 7, 2026</p>
-
-<p><strong>Credential ID:</strong>34TAQIH59U6U</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://coursera.org/share/2941b2e345d018866f0875cd2657caf0" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">IBM | Fundamentals of AI Agents Using RAG and LangChain</div>
+    <p><strong>Date:</strong> March 8, 2026</p>
+    <p><strong>Credential ID:</strong> XJ3B8PK8G5I4</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/8b753650061c2c08b9b1080a665129ee" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert9" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/Generative AI and LLMs.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Fundamentals of AI Agents Using RAG and LangChain.PNG" alt="Fundamentals of AI Agents Using RAG and LangChain">
+  </a>
 </div>
 
----
 <div class="cert-row">
+  <a href="#cert10">
+    <img src="/assets/img/certifications/Generative AI Advance Fine-Tuning for LLMs.PNG" class="cert-img" alt="Generative AI Advance Fine-Tuning for LLMs">
+  </a>
 
-<a href="#cert10">
-<img src="/assets/img/certifications/udemy ai-102.PNG" class="cert-img">
-</a>
-
-<div class="cert-info">
-
-<div class="cert-title">
-Udemy | AI-102: Microsoft Certified Azure AI Engineer Associate
-</div>
-
-<p><strong>Date:</strong> January 22, 2026</p>
-
-<p><strong>Credential ID:</strong>UC-6474f986-dc5a-4a51-a659-fa9e9b4fdf4f</p>
-
-<p><strong>Credential Link:</strong>  
-<a href="https://www.udemy.com/certificate/UC-6474f986-dc5a-4a51-a659-fa9e9b4fdf4f/" target="_blank">View Credential</a></p>
-
-</div>
+  <div class="cert-info">
+    <div class="cert-title">IBM | Generative AI Advance Fine-Tuning for LLMs</div>
+    <p><strong>Date:</strong> March 7, 2026</p>
+    <p><strong>Credential ID:</strong> CVKSHZF7UPON</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/d707149b1753c2f913f7104cb3281ea0" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
 </div>
 
 <div id="cert10" class="modal">
-<a href="#">
-<img src="/assets/img/certifications/udemy ai-102.PNG">
-</a>
+  <a href="#">
+    <img src="/assets/img/certifications/Generative AI Advance Fine-Tuning for LLMs.PNG" alt="Generative AI Advance Fine-Tuning for LLMs">
+  </a>
 </div>
 
+<div class="cert-row">
+  <a href="#cert11">
+    <img src="/assets/img/certifications/Generative AI Engineering and Fine-Tuning Transformers.PNG" class="cert-img" alt="Generative AI Engineering and Fine-Tuning Transformers">
+  </a>
+
+  <div class="cert-info">
+    <div class="cert-title">IBM | Generative AI Engineering and Fine-Tuning Transformers</div>
+    <p><strong>Date:</strong> February 28, 2026</p>
+    <p><strong>Credential ID:</strong> ITLKIK49Y2EL</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/4aa31f8da6de6cf79baf6cec582f420b" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
+</div>
+
+<div id="cert11" class="modal">
+  <a href="#">
+    <img src="/assets/img/certifications/Generative AI Engineering and Fine-Tuning Transformers.PNG" alt="Generative AI Engineering and Fine-Tuning Transformers">
+  </a>
+</div>
+
+<div class="cert-row">
+  <a href="#cert12">
+    <img src="/assets/img/certifications/Generative AI Language Modeling with Transformers.PNG" class="cert-img" alt="Generative AI Language Modeling with Transformers">
+  </a>
+
+  <div class="cert-info">
+    <div class="cert-title">IBM | Generative AI Language Modeling with Transformers</div>
+    <p><strong>Date:</strong> February 25, 2026</p>
+    <p><strong>Credential ID:</strong> 58F6EKRCYH3L</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/8c68c17f6058698553eddec17d31b45a" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
+</div>
+
+<div id="cert12" class="modal">
+  <a href="#">
+    <img src="/assets/img/certifications/Generative AI Language Modeling with Transformers.PNG" alt="Generative AI Language Modeling with Transformers">
+  </a>
+</div>
+
+<div class="cert-row">
+  <a href="#cert13">
+    <img src="/assets/img/certifications/Gen AI Foundational Models for NLP, Language Understanding.PNG" class="cert-img" alt="Gen AI Foundational Models for NLP and Language Understanding">
+  </a>
+
+  <div class="cert-info">
+    <div class="cert-title">IBM | Gen AI Foundational Models for NLP & Language Understanding</div>
+    <p><strong>Date:</strong> February 11, 2026</p>
+    <p><strong>Credential ID:</strong> SEJU0WSGRU1X</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/a97b3859cec9d8e19cc6fa672865229e" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
+</div>
+
+<div id="cert13" class="modal">
+  <a href="#">
+    <img src="/assets/img/certifications/Gen AI Foundational Models for NLP, Language Understanding.PNG" alt="Gen AI Foundational Models for NLP and Language Understanding">
+  </a>
+</div>
+
+<div class="cert-row">
+  <a href="#cert14">
+    <img src="/assets/img/certifications/Generative AI and LLMs.PNG" class="cert-img" alt="Generative AI and LLMs Architecture and Data Preparation">
+  </a>
+
+  <div class="cert-info">
+    <div class="cert-title">IBM | Generative AI and LLMs: Architecture and Data Preparation</div>
+    <p><strong>Date:</strong> February 7, 2026</p>
+    <p><strong>Credential ID:</strong> 34TAQIH59U6U</p>
+    <p><strong>Credential Link:</strong> <a href="https://coursera.org/share/2941b2e345d018866f0875cd2657caf0" target="_blank">View Credential</a></p>
+    <p class="cert-note"><em>Part of the IBM Generative AI Engineering with LLMs Specialization</em></p>
+  </div>
+</div>
+
+<div id="cert14" class="modal">
+  <a href="#">
+    <img src="/assets/img/certifications/Generative AI and LLMs.PNG" alt="Generative AI and LLMs Architecture and Data Preparation">
+  </a>
+</div>
+
+<h2 class="section-title">Additional Training</h2>
+<p class="section-subtitle">Supplementary preparation and exam support coursework.</p>
+
+<div class="cert-row">
+  <a href="#cert15">
+    <img src="/assets/img/certifications/udemy ai-102.PNG" class="cert-img" alt="Udemy AI-102 Course">
+  </a>
+
+  <div class="cert-info">
+    <div class="cert-title">Udemy | AI-102: Microsoft Certified Azure AI Engineer Associate</div>
+    <p><strong>Date:</strong> January 22, 2026</p>
+    <p><strong>Credential ID:</strong> UC-6474f986-dc5a-4a51-a659-fa9e9b4fdf4f</p>
+    <p><strong>Credential Link:</strong> <a href="https://www.udemy.com/certificate/UC-6474f986-dc5a-4a51-a659-fa9e9b4fdf4f/" target="_blank">View Credential</a></p>
+  </div>
+</div>
+
+<div id="cert15" class="modal">
+  <a href="#">
+    <img src="/assets/img/certifications/udemy ai-102.PNG" alt="Udemy AI-102 Course">
+  </a>
+</div>
